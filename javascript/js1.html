@@ -5,14 +5,11 @@
 		<title></title>
 	</head>
 	<body>
-		<p>JavaScript 能够直接写入 HTML 输出流中：</p>
-		<script>
-			document.write("<h1>这是一个标题</h1>");
-			document.write("<p>这是一个段落。</p>");
-		</script>
-		<p>
-			您只能在 HTML 输出流中使用 <strong>document.write</strong>。
-			如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+		<p>在DOCTYPE里面加入：<br />
+			<strong>html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd</strong>
+		</p>
+		<p>在html里面加入：<br />
+			<strong>xmlns="http://www.w3.org/1999/xhtml"</strong>
 		</p>
 	</body>
 </html>

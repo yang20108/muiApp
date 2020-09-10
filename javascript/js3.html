@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<script type="text/javascript" src="../js/function.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<h1>我的Web页面</h1>
+		<p id="demo">一个段落</p>
+		<button type="button" onclick="myFun()">尝试一下</button>
+		<button type="button" onclick="myFunction()">尝试两下</button>
+		<hr />
+		<button type="button" onclick="myAlert()">alert</button>
+		<button type="button" onclick="myWrite()">write</button>
+		<button type="button" onclick="myInner()">innerHTML</button>
+		<button type="button" onclick="myLog()">log</button>
+		<script>
+			function myFun() {
+				// innerHTML 来获取或插入元素内容：
+				document.getElementById("demo").innerHTML = "我的第一个 JavaScript 函数";
+			}
+		</script>
+	</body>
+</html>
