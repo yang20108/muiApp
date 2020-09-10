@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="demo">今天是星期几？</p>
+		<button onclick="whatDay()">点我看答案</button>
+		<hr />
+		<p>在 JavaScript 中，我们可使用以下条件语句：</p>
+		<ul>
+			<li>if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码</li>
+			<li>if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码</li>
+			<li>if...else if....else 语句- 使用该语句来选择多个代码块之一来执行</li>
+			<li>switch 语句 - 使用该语句来选择多个代码块之一来执行</li>
+			<li></li>
+			<li></li>
+		</ul>
+		<script type="text/javascript">
+			function whatDay() {
+				var day = new Date().getDay();
+				switch (day) {
+					case 0:
+						document.getElementById("demo").innerHTML = "今天星期日";
+						break;
+					case 1:
+						document.getElementById("demo").innerHTML = "今天星期一";
+						break;
+					case 2:
+						document.getElementById("demo").innerHTML = "今天星期二";
+						break;
+					case 3:
+						document.getElementById("demo").innerHTML = "今天星期三";
+						break;
+					case 4:
+						document.getElementById("demo").innerHTML = "今天星期四";
+						break;
+					case 5:
+						document.getElementById("demo").innerHTML = "今天星期五";
+						break;
+					case 6:
+						document.getElementById("demo").innerHTML = "今天星期六";
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

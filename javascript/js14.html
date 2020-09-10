@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>try 语句测试代码块的错误。</p>
+		<p>catch 语句处理错误。</p>
+		<p>throw 语句创建自定义错误。</p>
+		<p>finally 语句在 try 和 catch 语句之后，无论是否有触发异常，该语句都会执行。</p>
+		<hr />
+		<p>示例：请输入 5 ~ 10 之间的数字</p>
+		<input id="demo" type="text" />
+		<button type="button" onclick="bindCheck()">点我验证</button>
+		<p id="tips"></p>
+		<script type="text/javascript">
+			function bindCheck() {
+				var msg = document.getElementById("tips");
+				var val = document.getElementById("demo").value.trim();
+				try {
+					if ("" == val) throw "值是空的";
+					if (isNaN(val)) throw "值不是一个数字"
+					val = Number(val);
+					if (10 < val) throw "太大";
+					if (5 > val) throw "太小";
+				} catch(e) {
+					//TODO handle the exception
+					msg.innerHTML = "错误：" + e 
+				} finally {
+					document.getElementById("demo").value = "";
+				}
+			}
+		</script>
+	</body>
+</html>

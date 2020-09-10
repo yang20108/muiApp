@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="for">使用for循环</p>
+		<p id="forin">使用forin循环</p>
+		<p id="while">使用while循环</p>
+		<p id="do">使用do/while循环</p>
+		<p id="break">使用break循环</p>
+		<p id="continue">使用continue循环</p>
+		<hr />
+		<p>break 语句用户跳出循环。</p>
+		<p>continue 用户跳过循环中的一个迭代</p>
+		<script type="text/javascript">
+			var list = ['a', 'b', 'c', 'd', 'e'];
+			var strFor = "使用for循环：";
+			for (var i = 0; i < list.length; i++) {
+				strFor += list[i] + ",";
+			}
+			document.getElementById("for").innerHTML = strFor;
+
+			var person={fname:"Bill",lname:"Gates",age:56};
+			var strForin = "使用for in循环：";
+			for (per in person) {
+				strForin += person[per] + ","
+			}
+			document.getElementById("forin").innerHTML = strForin;
+
+			var w=0,strWhile = "使用while循环：";
+			while (w < 5) {
+				strWhile += w + ",";
+				w++;
+			}
+			document.getElementById("while").innerHTML = strWhile;
+
+			var d=5,strDo = "使用do/while循环：";
+			do {
+				strDo += d + ",";
+				d++;
+			} while (d < 10)
+			document.getElementById("do").innerHTML = strDo;
+
+			var strBreak = "使用break循环，0-9当数字到5时停止循环：";
+			for (var b = 0; b < 10; b++) {
+				if (b == 5) { break; }
+				strBreak += b + ","
+			}
+			document.getElementById("break").innerHTML = strBreak;
+
+			var strContinue = "使用coutinue循环，0-9当数字到3时继续循环：";
+			for (var c = 0; c < 10; c++) {
+				if (c == 3) { continue; }
+				strContinue += c + ","
+			}
+			document.getElementById("continue").innerHTML = strContinue;
+		</script>
+	</body>
+</html>
