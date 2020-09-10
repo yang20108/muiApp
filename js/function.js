@@ -14,6 +14,10 @@ function myLog() {
 	console.log("这是console.log()");
 }
 
+function myFuncti() {
+	return "我的第三个 JavaScript 函数";
+}
+
 function myFunction() {
 	document.getElementById("demo").innerHTML = "我的第二个 JavaScript 函数";
 }

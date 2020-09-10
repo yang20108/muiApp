@@ -11,6 +11,7 @@
 		<p id="demo">一个段落</p>
 		<button type="button" onclick="myFun()">尝试一下</button>
 		<button type="button" onclick="myFunction()">尝试两下</button>
+		<button type="button" onclick="myFunct()">尝试三下</button>
 		<hr />
 		<button type="button" onclick="myAlert()">alert</button>
 		<button type="button" onclick="myWrite()">write</button>
@@ -20,6 +21,9 @@
 			function myFun() {
 				// innerHTML 来获取或插入元素内容：
 				document.getElementById("demo").innerHTML = "我的第一个 JavaScript 函数";
+			}
+			function myFunct() {
+				document.getElementById("demo").innerHTML = myFuncti();
 			}
 		</script>
 	</body>
