@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>变量是用于存储信息的"容器"，使用var声明。</p>
+		<ul>
+			<li>变量必须以字母开头</li>
+			<li>变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
+			<li>变量名称对大小写敏感（y 和 Y 是不同的变量）</li>
+			<li>JavaScript 语句和 JavaScript 变量都对大小写敏感。</li>
+		</ul>
+		<hr />
+		<p id="pval"></p>
+		<script type="text/javascript">
+			var lastname = "Doe", age = 30, job = "carpenter";
+			if (lastname) {
+				job = lastname;
+			}
+			document.getElementById("pval").innerHTML = job;
+		</script>
+	</body>
+</html>

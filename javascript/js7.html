@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p><strong>值类型(基本类型)</strong>：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol。</p>
+		<ul><li>Symbol 是 ES6 引入了一种新的原始数据类型，表示独一无二的值。</li></ul>
+		<p><strong>引用数据类型</strong>：对象(Object)、数组(Array)、函数(Function)。</p>
+		<hr />
+		<p>对象属性有两种寻址方式：</p>
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<script type="text/javascript">
+			var cars = new Array();
+			cars[0] = "Wx";
+			cars[1] = "Xtu";
+			cars[2] = "Ser";
+
+			// 对象属性有两种寻址方式：
+			var persion = {
+				firstname: "John",
+				lastname: "Doe",
+				id: 31
+			}
+			document.getElementById("p1").innerHTML = "第一种：" + persion.firstname;
+			document.getElementById("p2").innerHTML = "第二种：" + persion["lastname"];
+		</script>
+	</body>
+</html>
