@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>函数表达式可以 "自调用"。如果表达式后面紧跟 () ，则会自动调用。</p>
+		<p>ES6 新增了箭头函数。如果函数部分只是一个语句，则可以省略 return 关键字和大括号 {}</p>
+		<p>ES5 中如果函数在调用时未提供隐式参数，参数会默认设置为： undefined</p>
+		<p>ES6 函数可以自带参数</p>
+		<script type="text/javascript">
+			// 通过添加括号，来说明它是一个函数表达式(匿名自我调用的函数)
+			(function() {
+				var x = "Hello!"; // 我将调用自己
+				console.log("x: ", x);
+			})()
+			// 箭头函数
+			var y = (n1, n2) => {
+				return n1 + n2;
+			}
+			console.log("y: ", y(1, 2));
+			// 箭头函数，当只有一个参数时，圆括号是可选的
+			var z = n1 => {
+				return n1 + 5;
+			}
+			console.log("z: ", z(5));
+			// 箭头函数，没有参数的函数应该写成一对圆括号
+			var s = () => {
+				return 8 + 5;
+			}
+			console.log("s: ", s());
+			// ES5默认参数
+			function funES5(n1, n2) {
+				// 如果n2已经定义，n2 || 返回n2,因为n2是true,否则返回0,因为undefined为false
+				n2 = n2 || 0;
+				return n1 + n2;
+			}
+			console.log("funES5: ",funES5(9));
+			// ES6 函数可以自带参数
+			function funES6(n1, n2 = 10) {
+				return n1 + n2;
+			}
+			console.log("funES6: ",funES6(2));
+		</script>
+	</body>
+</html>
