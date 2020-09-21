@@ -2,3 +2,27 @@
 	width: 600px;
 	height: 500px;
 }
+.def-width {
+	width: 50%;
+}
+.text-tips {
+	color: #f4795a;
+}
+
+
+.ban-shi-title {
+	background-color: #bababa;
+	border: 1px solid #EAEAEA;
+	display: flex;
+	padding: 5px;
+}
+.ban-shi-item {
+	display: flex;
+	padding: 5px;
+	border-left: 1px solid #EAEAEA;
+	border-right: 1px solid #EAEAEA;
+	border-bottom: 1px solid #EAEAEA;
+}
+.ban-shi-item:nth-child(even) {
+	background-color: #F6F4F0;
+}
