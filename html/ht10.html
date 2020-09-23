@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+	</head>
+
+	<body>
+		<h3>HTML 区块元素</h3>
+		<div>大多数 HTML 元素被定义为<b>块级元素</b>或<b>内联元素</b>，块级元素在浏览器显示时，
+			通常<strong>会以新行</strong>来开始（和结束）。比如：&lt;h1&gt;,&lt;p&gt;,&lt;ul&gt;,&lt;table&gt;</div>
+		<h3>HTML 内联元素</h3>
+		<div>内联元素在显示时通常<strong>不会以新行</strong>开始。比如：&lt;b&gt;,&lt;td&gt;,&lt;a&gt;,&lt;img&gt;</div>
+		<h3>HTML &lt;div&gt;元素</h3>
+		<div>&lt;div&gt; 元素是块级元素，它可用于组合其他 HTML 元素的容器。</div>
+		<h3>HTML &lt;span&gt;元素</h3>
+		<div>&lt;span&gt; 元素是内联元素，可用作文本的容器。也没有特定的含义。当与 CSS 一同使用时，&lt;span&gt; 元素可用于为部分文本设置样式属性。</div>
+		<h3>HTML 布局</h3>
+		<div>div 元素是用于分组 HTML 元素的块级元素。</div>
+		<div id="container" style="width:100%;">
+			<div id="header" style="background-color:#FFA500;">
+				<h2 style="margin-bottom:0px;">主要的网页标题</h2>
+			</div>
+			<div id="menu" style="background-color:#FFD700;height:100px;width:30%;float:left;">
+				<b>菜单</b><br />HTML<br />CSS<br />JavaScript<br />
+			</div>
+			<div id="content" style="background-color:#EEEEEE;height: 100px;width:70%;float:left;">内容在这里</div>
+			<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">版权 © runoob.com</div>
+		</div>
+		<h3>HTML 布局 - 使用表格</h3>
+		<div>即使可以使用 HTML 表格来创建漂亮的布局，但设计表格的目的是呈现表格化数据 - 表格不是布局工具！</div>
+		<table width="100%" border="0">
+			<tr>
+				<td colspan="2" style="background-color:#FFA500;">
+					<h2>主要的网页标题</h2>
+				</td>
+			</tr>
+			<tr>
+				<td style="background-color:#FFD700;width:30%;">
+					<b>菜单</b><br />HTML<br />CSS<br />JavaScript
+				</td>
+				<td style="background-color:#EEEEEE;height: 100px;width: 70%;">内容在这里</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="background-color:#FFA500;text-align:center;">版权 © runoob.com</td>
+			</tr>
+		</table>
+	</body>
+</html>
