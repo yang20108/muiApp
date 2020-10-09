@@ -5,10 +5,27 @@
 .def-width {
 	width: 50%;
 }
+.def-width2 {
+	width: 33%;
+}
 .text-tips {
 	color: #f4795a;
 }
+.text-yu-fa {
+	padding: 5px;
+	border: 1px solid #D4D4D4;
+	background-color: #F6F4F0;
+}
+.bg-color {
+	background-color: #efeff4;
+}
 
+.main-title {
+	height: 100px;
+	width: 100%;
+	padding: 3px 10px;
+	background-color: #CCCCCC;
+}
 
 .ban-shi-title {
 	background-color: #bababa;

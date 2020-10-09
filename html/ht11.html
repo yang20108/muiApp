@@ -1,9 +1,89 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
 	</head>
 	<body>
+		<h3>表单和输入</h3>
+		<form name="input" method="get" action="">
+		<fieldset>
+		<legend>面试申请</legend>
+			账户：<input type="text" name="account" /><br />
+			密码：<input type="password" name="password" /><br />
+			性别：<input type="radio" name="sex" value="man" checked="checked" />男
+			<input type="radio" name="sex" value="woman" />女<br />
+			特长：<input type="checkbox" name="speciality" value="" />会计
+			<input type="checkbox" name="speciality" value="" />工程师
+			<input type="checkbox" name="speciality" value="" />经理<br />
+			经验：<select name="experience">
+				<option value="one">1年</option>
+				<option value="two">2年</option>
+				<option value="three">3年</option>
+			</select><br />
+			补充：<textarea rows="5" cols="25"></textarea><br />
+			<input type="reset" value="重置" />
+			<input type="submit" value="提交" />
+		</fieldset>
+		</form>
+		<div style="height: 10px;"></div>
+		<div class="ban-shi-title">
+			<div class="def-width">标签</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;form&gt;</div>
+			<div class="def-width">供用户输入的表单</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;input&gt;</div>
+			<div class="def-width">输入域</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;textarea&gt;</div>
+			<div class="def-width">文本域（多行输入）</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;label&gt;</div>
+			<div class="def-width">定义input输入标签的标题</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;fieldset&gt;</div>
+			<div class="def-width">将表单元素使用外框包含起来</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;legend&gt;</div>
+			<div class="def-width">fieldset标签的标题</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;select&gt;</div>
+			<div class="def-width">下拉选项列表</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;optgroup&gt;</div>
+			<div class="def-width">选项组</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;option&gt;</div>
+			<div class="def-width">下拉列表中的选项</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;button&gt;</div>
+			<div class="def-width">点击按钮</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;datalist&gt;</div>
+			<div class="def-width">指定一个预先定义的输入控件选项列表</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;keygen&gt;</div>
+			<div class="def-width">表单的密钥对生成器字段</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;output&gt;</div>
+			<div class="def-width">计算结果</div>
+		</div>
 	</body>
 </html>
