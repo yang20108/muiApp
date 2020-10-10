@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div>&lt;canvas&gt; 标签定义图形，比如图表和其他图像，您必须使用脚本来绘制图形。</div>
+		<h3>什么是 canvas?</h3>
+		<div>HTML5 &lt;canvas&gt; 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.</div>
+		<div>&lt;canvas&gt; 标签只是图形容器，您必须使用脚本来绘制图形。</div>
+		<div>你可以通过多种方法使用 canvas 绘制路径,盒、圆、字符以及添加图像。</div>
+		<h3>创建一个画布（Canvas）</h3>
+		<div class="text-tips">注意: 默认情况下 &lt;canvas&gt; 元素没有边框和内容。</div>
+		<div class="text-yu-fa">&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</div>
+		<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000;margin-top: 10px;"></canvas>
+		<h3>使用 JavaScript 来绘制图像</h3>
+		<div>canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：</div>
+		<canvas id="myCanvasJS"></canvas>
+		<script>
+			var myC = document.getElementById("myCanvasJS");
+			// 创建 context 对象
+			var ctx = myC.getContext("2d");
+			ctx.fillStyle = "#ff9587";
+			// 定义了矩形当前的填充方式
+			ctx.fillRect(0, 0, 200, 100);
+		</script>
+		<h3>Canvas 坐标</h3>
+		<div>canvas 是一个二维网格，左上角坐标为 (0,0)。</div>
+		<div class="uni-flex">
+			<div style="margin: auto 0px;">Y</div>
+			<div style="margin-left: 10px;">
+				<div style="text-align: center;">X</div>
+				<canvas id="myCanvasZB" width="200" height="100" style="border: 1px solid #000000;margin-top: 10px;"></canvas>
+			</div>
+		</div>
+		<h3>Canvas 路径</h3>
+		<div>在Canvas上画线，我们将使用以下两种方法：</div>
+		<ul>
+			<li>moveTo(x,y) 定义线条开始坐标</li>
+			<li>lineTo(x,y) 定义线条结束坐标</li>
+		</ul>
+		<div>定义开始坐标(0,0), 和结束坐标 (200,100)。然后使用 stroke() 方法来绘制线条:</div>
+		<canvas id="myCanvasLJ" width="200" height="100" style="border: 1px solid #e1e1e1;"></canvas>
+		<script>
+			var myLJ = document.getElementById("myCanvasLJ");
+			var ctx = myLJ.getContext("2d");
+			ctx.moveTo(0, 0);
+			ctx.lineTo(200, 100);
+			ctx.stroke();
+		</script>
+		<p>在canvas中绘制圆形, 我们将使用以下方法:</p>
+		<div class="text-yu-fa">arc(x, y, r, start, stop)</div>
+		<canvas id="myCanvasArc" width="200" height="100" style="border: 1px solid #e1e1e1;margin-top: 10px;"></canvas>
+		<script>
+			var myArc = document.getElementById("myCanvasArc");
+			var ctx = myArc.getContext("2d");
+			ctx.beginPath();
+			ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+		</script>
+		<h3>Canvas 文本</h3>
+		<div>使用 canvas 绘制文本，重要的属性和方法如下：</div>
+		<ul>
+			<li>font - 定义字体</li>
+			<li>fillText(text,x,y) - 在 canvas 上绘制实心的文本</li>
+			<li>strokeText(text,x,y) - 在 canvas 上绘制空心的文本</li>
+		</ul>
+		<div>使用 "Arial" 字体在画布上绘制一个高 30px 的文字（实心）：</div>
+		<canvas id="myCanvasAri" width="200" height="100" style="border: 1px solid #e1e1e1;margin-top: 10px;"></canvas>
+		<script>
+			var myAri = document.getElementById("myCanvasAri");
+			var ctx = myAri.getContext("2d");
+			ctx.font = "30px Arial";
+			ctx.fillText("Hello World", 10, 50);
+		</script>
+		<div>使用 "Arial" 字体在画布上绘制一个高 30px 的文字（空心）：</div>
+		<canvas id="myCanvasArs" width="200" height="100" style="border: 1px solid #e1e1e1;margin-top: 10px;"></canvas>
+		<script>
+			var myArs = document.getElementById("myCanvasArs");
+			var ctx = myArs.getContext("2d");
+			ctx.font = "30px Arial";
+			ctx.strokeText("Hello World", 10, 50);
+		</script>
+		<h3>Canvas 渐变</h3>
+		<div>渐变可以填充在矩形, 圆形, 线条, 文本等等, 各种形状可以自己定义不同的颜色。</div>
+		<div>以下有两种不同的方式来设置Canvas渐变：</div>
+		<ul>
+			<li>createLinearGradient(x,y,x1,y1) - 创建线条渐变</li>
+			<li>createRadialGradient(x,y,r,x1,y1,r1) - 创建一个径向/圆渐变</li>
+		</ul>
+		<div>创建一个线性渐变。使用渐变填充矩形:</div>
+		<canvas id="myCanvasJB" width="200" height="100" style="border: 1px solid #e1e1e1;margin-top: 10px;"></canvas>
+		<script>
+			var myJB = document.getElementById("myCanvasJB");
+			var ctx = myJB.getContext("2d");
+			// 创建渐变
+			var grd = ctx.createLinearGradient(0, 0, 200, 0);
+			// addColorStop()方法指定颜色停止，参数使用坐标来描述，可以是0至1.
+			grd.addColorStop(0, "red");
+			grd.addColorStop(1, "white");
+			// 填充渐变
+			ctx.fillStyle = grd;
+			ctx.fillRect(10, 10, 150, 80);
+		</script>
+		<div>创建一个径向/圆渐变。使用渐变填充矩形：</div>
+		<canvas id="myCanvasJG" width="200" height="100" style="border: 1px solid #e1e1e1;margin-top: 10px;"></canvas>
+		<script>
+			var myJG = document.getElementById("myCanvasJG");
+			var ctx = myJG.getContext("2d");
+			// 创建渐变
+			var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+			// addColorStop()方法指定颜色停止，参数使用坐标来描述，可以是0至1.
+			grd.addColorStop(0, "red");
+			grd.addColorStop(1, "white");
+			// 填充渐变
+			ctx.fillStyle = grd;
+			ctx.fillRect(10, 10, 150, 80);
+		</script>
+		<h3>Canvas 图像</h3>
+		<div>把一幅图像放置到画布上, 使用以下方法:</div>
+		<ul>
+			<li>drawImage(image, x, y)</li>
+		</ul>
+	</body>
+</html>
