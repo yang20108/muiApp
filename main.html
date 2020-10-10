@@ -10,20 +10,23 @@
 		<link rel="stylesheet" href="css/mui.min.css" />
 		<script src="js/mui.min.js"></script>
 		<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
-		<!-- HTML教程 https://www.runoob.com/html/html5-intro.html -->
+		<!-- HTML教程 https://www.runoob.com/html/html5-svg.html -->
 		<!-- JavaScript教程 https://www.runoob.com/js/js-tutorial.html -->
 	</head>
 	<body>
 		<div class="mui-content">
 			<div style="padding: 3px 10px;background-color: #CCCCCC;">
-				<div id="segmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<a class="mui-control-item mui-active" href="#item1">HTML</a>
-					<a class="mui-control-item" href="#item2">Css</a>
-					<a class="mui-control-item" href="#item3">JavaScript</a>
-					<a class="mui-control-item" href="#item4">JQuery</a>
+				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1">HTML</a>
+						<a class="mui-control-item" href="#item2">HTML5</a>
+						<!-- <a class="mui-control-item" href="#item3">Css</a>
+						<a class="mui-control-item" href="#item4">JavaScript</a>
+						<a class="mui-control-item" href="#item5">JQuery</a> -->
+					</div>
 				</div>
 			</div>
-			<div id="item4" class="mui-control-content">
+			<!-- <div id="item5" class="mui-control-content">
 				<div class="mui-scroll-wrapper mui-scroll">
 					<ul class="bo-ul">
 						<li id="jquery/jq1.html" onclick="bindClick(this.id, 'Title')">
@@ -34,7 +37,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="item3" class="mui-control-content">
+			<div id="item4" class="mui-control-content">
 				<div class="mui-scroll-wrapper mui-scroll">
 					<ul class="bo-ul">
 						<li id="javascript/js16.html" onclick="bindClick(this.id, 'Title')">
@@ -120,7 +123,23 @@
 					</ul>
 				</div>
 			</div>
-			<div id="item2" class="mui-control-content"></div>
+			<div id="item3" class="mui-control-content"></div> -->
+			<div id="item2" class="mui-control-content">
+				<div class="mui-scroll-wrapper mui-scroll">
+					<ul class="bo-ul">
+						<li id="html5/ht51.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">教程
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="html5/ht52.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">Canvas
+								<div class="chs"></div>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div id="item1" class="mui-control-content mui-active">
 				<div class="mui-scroll-wrapper mui-scroll">
 					<ul class="bo-ul">

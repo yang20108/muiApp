@@ -26,6 +26,11 @@
 	background-color: #efeff4;
 }
 
+.uni-flex {
+	display: flex;
+	flex-direction: row;
+}
+
 .main-title {
 	height: 100px;
 	width: 100%;
