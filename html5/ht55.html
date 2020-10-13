@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+		<style type="text/css">
+			#div1 {
+				width: 300px;
+				height: 80px;
+				padding: 10px;
+				border: 1px solid #AAAAAA;
+			}
+		</style>
+	</head>
+	<body>
+		<p>拖放（Drag 和 drop）是 HTML5 标准的组成部分。</p>
+		<h3>拖放</h3>
+		<div>拖放是一种常见的特性，即抓取对象以后拖到另一个位置。</div>
+		<div>在 HTML5 中，拖放是标准的一部分，任何元素都能够拖放。</div>
+		<h3>HTML5 拖放实例</h3>
+		<p>拖动图片到矩形框中:</p>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<br />
+		<img id="drag1" src="../img/html5.gif" draggable="true" ondragstart="drag(event)" width="280" height="70" />
+		<script>
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("Text", ev.target.id);
+			}
+
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("Text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+		</script>
+		<h3>设置元素为可拖放</h3>
+		<div>首先，为了使元素可拖动，把 draggable 属性设置为 true ：</div>
+		<div class="text-yu-fa">&lt;img draggable="true"&gt;</div>
+		<h3>拖动什么 ondragstart 和 setData()</h3>
+		<div>例子中，ondragstart 属性调用了一个函数，drag(event)，它规定了被拖动的数据。</div>
+		<div>dataTransfer.setData() 方法设置被拖数据的数据类型和值：</div>
+		<div class="text-yu-fa">
+			function drag(ev) {<br />
+				<div class="text-suo-jin">ev.dataTransfer.setData("Text",ev.target.id);</div>
+			}
+		</div>
+		<div>Text 是一个 DOMString 表示要添加到 drag object 的拖动数据的类型。值是可拖动元素的 id ("drag1")。</div>
+		<h3>放到何处 ondragover</h3>
+		<div>ondragover 事件规定在何处放置被拖动的数据。</div>
+		<div class="text-yu-fa">event.preventDefault();</div>
+		<h3>进行放置 ondrop</h3>
+		<div>当放置被拖数据时，会发生 drop 事件。</div>
+		<div class="text-yu-fa">
+			function drop(ev) {<br />
+			<div class="text-suo-jin">ev.preventDefault();</div>
+			<div class="text-suo-jin">var data = ev.dataTransfer.getData("Text");</div>
+			<div class="text-suo-jin">ev.target.appendChild(document.getEleme</div>
+			<div class="text-suo-jin">ntById(data));</div>
+			}
+		</div>
+		<div>代码解释：</div>
+		<ul>
+			<li>调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）</li>
+			<li>通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。</li>
+			<li>被拖数据是被拖元素的 id ("drag1")</li>
+			<li>把被拖元素追加到放置元素（目标元素）中</li>
+		</ul>
+	</body>
+</html>

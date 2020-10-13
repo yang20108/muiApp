@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<h3>什么是SVG ？</h3>
+		<ul>
+			<li>SVG指可伸缩矢量图形（Scalable Vector Graphics）</li>
+			<li>SVG用于定义网络的基于矢量的图形</li>
+			<li>SVG使用XML格式定义图形</li>
+			<li>SVG图像在放大或改变尺寸的情况下，其图形质量不会有损失</li>
+			<li>SVG是万维网联盟的标准</li>
+		</ul>
+		<h3>SVG 优势</h3>
+		<div>与其他图像格式相比（比如JPEG和GIF），SVG的优势在于：</div>
+		<ul>
+			<li>SVG图像可通过文本编辑器来创建和修改</li>
+			<li>SVG图像可被搜索、索引、脚本化或压缩</li>
+			<li>SVG是可伸缩的</li>
+			<li>SVG图像可在任何的分辨率下被高质量的打印</li>
+			<li>SVG可在图像质量不下降的情况下被放大</li>
+		</ul>
+		<h3>HTML页面嵌入SVG</h3>
+		<svg xmlns="http:www.w3.org/2000/svg" version="1.1" height="190">
+			<polygon points="100,10 40,180 190,60 10,60 160,180"
+			style="fill:lime;stroke:purple;stroke-width:5;fill-rule: evenodd;"></polygon>
+		</svg>
+		<h3>SVG 与 Canvas两者间的区别</h3>
+		<div>SVG 是一种使用 XML 描述 2D 图形的语言。</div>
+		<div>Canvas 通过 JavaScript 来绘制 2D 图形。</div>
+		<div>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。</div>
+		<div>在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。</div>
+		<div>Canvas 是逐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</div>
+		<h3>Canvas 与 SVG 的比较</h3>
+		<div>下表列出了 canvas 与 SVG 之间的一些不同之处。</div>
+		<div class="ban-shi-title">
+			<div class="def-width">Canvas</div>
+			<div class="def-width">SVG</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">依赖分辨率</div>
+			<div class="def-width">不依赖分辨率</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">不支持事件处理器</div>
+			<div class="def-width">支持事件处理器</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">弱的文本渲染能力</div>
+			<div class="def-width">最适合带有大型渲染区域的应用程序（比如谷歌地图）</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">能够以 .png 或 .jpg 格式保存结果图像</div>
+			<div class="def-width">复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">最适合图像密集型的游戏，其中的许多对象会被频繁重绘</div>
+			<div class="def-width">不适合游戏应用</div>
+		</div>
+	</body>
+</html>
