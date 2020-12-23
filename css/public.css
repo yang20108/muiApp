@@ -1,3 +1,17 @@
+
+.tu-body {
+	width: 50%;height: auto;background-color: #ecf4e6;padding: 10px;box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.tu-item {
+	padding: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #BAD586;
+	border-radius: 10px;
+}
 .def-img {
 	width: 600px;
 	height: 500px;
