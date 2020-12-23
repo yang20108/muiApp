@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div>语义 = 意义</div>
+		<div>语义元素 = 有意义的元素</div>
+		<h3>什么是语义元素?</h3>
+		<div>一个语义元素能够清楚的描述其意义给浏览器和开发者。</div>
+		<div><p>无语义</p> 元素实例: &lt;div&gt; 和 &lt;span&gt; - 无需考虑内容.</div>
+		<div><p>语义</p> 元素实例: &lt;form&gt;, &lt;table&gt;, and &lt;img&gt; - 清楚的定义了它的内容.</div>
+		<h3>HTML5中新的语义元素</h3>
+		<div style="width: 100%;display: flex;flex-direction: row;">
+			<div style="width: 50%;background-color: #e3f7eb;">
+				<ul>
+					<li>&lt;header&gt;</li>
+					<li>&lt;nav&gt;</li>
+					<li>&lt;section&gt;</li>
+					<li>&lt;article&gt;</li>
+					<li>&lt;aside&gt;</li>
+					<li>&lt;figcaption&gt;</li>
+					<li>&lt;figure&gt;</li>
+					<li>&lt;footer&gt;</li>
+				</ul>
+			</div>
+			<div class="tu-body">
+				<div class="tu-item">&lt;header&gt;</div>
+				<div class="tu-item">&lt;nav&gt;</div>
+				<div style="display: flex;flex-direction: row;justify-content: space-between;">
+					<div class="def-width" style="margin-right: 3px;">
+						<div class="tu-item">&lt;article&gt;</div>
+						<div class="tu-item" style="background-color: #DAEBB7;">&lt;section&gt;</div>
+					</div>
+					<div class="tu-item def-width">&lt;aside&gt;</div>
+				</div>
+				<div class="tu-item">&lt;footer&gt;</div>
+			</div>
+		</div>
+		<h3>&lt;section&gt; 元素</h3>
+		<div>&lt;section&gt; 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</div>
+		<div>根据W3C HTML5文档: section 包含了一组内容及其标题。</div>
+		示例：
+		<div class="text-yu-fa">
+			&lt;section&gt;<br />
+			&lt;h1&gt;WWF&lt;/h1&gt;<br />
+			&lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt;<br />
+			&lt;/section&gt;
+		</div>
+		<h3>&lt;article&gt; 元素</h3>
+		<div>&lt;article&gt; 标签定义独立的内容。</div>
+		<div>&lt;article&gt; 元素使用实例</div>
+		<ul>
+			<li>Forum post</li>
+			<li>Blog post</li>
+			<li>News story</li>
+			<li>Comment</li>
+		</ul>
+		示例：
+		<div class="text-yu-fa">
+			&lt;article&gt;<br />
+			&lt;h1&gt;Internet Explorer 9&lt;/h1&gt;<br />
+			&lt;p&gt;Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。&lt;/p&gt;<br />
+			&lt;/article&gt;
+		</div>
+		<h3>&lt;nav&gt; 元素</h3>
+		<div>&lt;nav&gt; 标签定义导航链接的部分。</div>
+		<div>&lt;nav&gt; 元素用于定义页面的导航链接部分区域。</div>
+		示例：
+		<div class="text-yu-fa">
+			&lt;nav&gt;<br />
+			&lt;a href="/html/"&gt;HTML&lt;/a&gt;<br />
+			&lt;a href="/css/"&gt;CSS&lt;/a&gt;<br />
+			&lt;a href="/js/"&gt;JavaScript&lt;/a&gt;<br />
+			&lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;<br />
+			&lt;/nav&gt;
+		</div>
+		<h3>&lt;aside&gt; 元素</h3>
+		<div>&lt;aside&gt; 标签定义页面主区域内容之外的内容（比如侧边栏）。</div>
+		<div>&lt;aside&gt; 标签的内容应与主区域的内容相关.</div>
+		示例：
+		<div class="text-yu-fa">
+			&lt;aside&gt;<br />
+			&lt;h4&gt;Epcot Center&lt;/h4&gt;<br />
+			&lt;p&gt;The Epcot Center is a theme park in Disney World, Florida.&lt;/p&gt;<br />
+			&lt;/aside&gt;
+		</div>
+		<h3>&lt;header&gt; 元素</h3>
+		<div>&lt;header&gt;元素描述了文档的头部区域</div>
+		<div>&lt;header&gt;元素主要用于定义内容的介绍展示区域.</div>
+		示例：
+		<div class="text-yu-fa">
+			&lt;header&gt;<br />
+			&lt;h1&gt;Internet Explorer 9&lt;/h1&gt;<br />
+			&lt;p&gt;Windows Internet Explorer 9(缩写为 IE9 )是在2011年3月14日21:00发布的&lt;/p&gt;<br />
+			&lt;/header&gt;
+		</div>
+		<h3>&lt;footer&gt; 元素</h3>
+		<div>&lt;footer&gt; 元素描述了文档的底部区域.</div>
+		<div>&lt;footer&gt; 元素应该包含它的包含元素.</div>
+		示例：
+		<div class="text-yu-fa">
+			&lt;footer&gt;<br />
+			&lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;<br />
+			&lt;/footer&gt;
+		</div>
+		<h3>&lt;figure&gt; 和 &lt;figcaption&gt; 元素</h3>
+		<div>&lt;figure&gt; 标签规定独立的流内容（图像、图表、照片、代码等等）。</div>
+		<div>&lt;figure&gt; 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。</div>
+		<div>&lt;figcaption&gt; 标签定义&lt;figure&gt; 元素的标题.</div>
+		<div>&lt;figcaption&gt; 元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。</div>
+		示例：
+		<div class="text-yu-fa">
+			&lt;figure&gt;<br />
+			&lt;figcaption&gt;Fig1. - The Pulpit Pock, Norway.&lt;/figcaption&gt;<br />
+			&lt;/figure&gt;
+		</div>
+	</body>
+</html>

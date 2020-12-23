@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div>HTML5 有以下新的表单元素:</div>
+		<ul>
+			<li>&lt;datalist&gt; 元素规定输入域的<b>选项列表</b></li>
+			<li>&lt;keygen&gt;</li>
+			<li>&lt;output&gt;</li>
+		</ul>
+		<div class="text-tips">注意:不是所有的浏览器都支持HTML5 新的表单元素</div>
+		<h3>&lt;datalist&gt; 元素</h3>
+		<div>使用 &lt;input&gt; 元素的列表属性与 &lt;datalist&gt; 元素绑定.</div>
+		输入浏览器名称：<input list="browsers" />
+		<datalist id="browsers">
+			<option value="Internet Explorer"></option>
+			<option value="Firefox"></option>
+			<option value="Chrome"></option>
+			<option value="Opera"></option>
+			<option value="Safari"></option>
+		</datalist>
+		<h3>&lt;keygen&gt; 元素</h3>
+		<div>&lt;keygen&gt; 元素的作用是提供一种验证用户的可靠方法。 </div>
+		<div>&lt;keygen&gt; 标签规定用于表单的密钥对生成器字段。 </div>
+		<div class="text-yu-fa">
+			&lt;from action="#" method="get"&gt;<br />
+			用户名: &lt;input type="text" name="usr_name"&gt;<br />
+			加密：&lt;keygen name="security"&gt;<br />
+			&lt;input type="submit" /&gt;<br />
+			&lt;/from&gt;
+		</div>
+		<h3>&lt;output&gt;元素</h3>
+		<div>&lt;output&gt; 元素用于不同类型的输出</div>
+		<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+		<input type="range" id="a" value="50">100
+		+ <input type="number" id="b" value="50">
+		= <output name="x" for="a b"></output>
+		</form><br />
+		<div class="ban-shi-title">
+			<div class="def-width">标签</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;datalist&gt;</div>
+			<div class="def-width">&lt;input&gt;标签定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值。</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;keygen&gt;</div>
+			<div class="def-width">keygen 标签规定用于表单的密钥对生成器字段</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">&lt;output&gt;</div>
+			<div class="def-width">output 标签定义不同类型的输出，比如脚本的输出</div>
+		</div>
+	</body>
+</html>
