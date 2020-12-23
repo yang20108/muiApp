@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<p>HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。</p>
+		<div>这些新的 Input 输入类型：</div>
+		<ul>
+			<li>color</li>
+			<li>date</li>
+			<li>datetime</li>
+			<li>datetime-local</li>
+			<li>email</li>
+			<li>month</li>
+			<li>number</li>
+			<li>range</li>
+			<li>search</li>
+			<li>tel</li>
+			<li>time</li>
+			<li>url</li>
+			<li>week</li>
+		</ul>
+		<div><b>color</b> 选取颜色</div>
+		选择颜色：<input type="color" name="favcolor" />
+		<div><b>date</b> 选择一个日期</div>
+		选择生日：<input type="date" name="bday" />
+		<div><b>datetime</b> 选择一个日期（UTC 时间）</div>
+		选择生日(日期和时间)：<input type="datetime" name="bdaytime" />
+		<div><b>datetime-local</b> 选择一个日期和时间（无时区）</div>
+		选择生日(日期和时间)：<input type="datetime-local" name="bdaytime" />
+		<div><b>email</b> 会自动验证 email 域的值是否合法有效</div>
+		E-mail：<input type="email" name="email" />
+		<div><b>month</b> 选择一个月份</div>
+		生日 (月和年)：<input type="month" name="bdaymonth" />
+		<div><b>number</b> 包含数值的</div>
+		数量 ( 1 到 10 之间 )：<input type="number" name="quantity" min="1" max="10" />
+		<div><b>range</b> 包含一定范围内数字值的输入域</div>
+		不需要非常精确的数值：<input type="range" name="points" min="1" max="10" />
+		<div>range 类型显示为滑动条，下面的属性来规定对数字类型的限定：</div>
+		<ul>
+			<li>max - 规定允许的最大值</li>
+			<li>min - 规定允许的最小值</li>
+			<li>step - 规定合法的数字间隔</li>
+			<li>value - 规定默认值</li>
+		</ul>
+		<div><b>search</b> 用于搜索域</div>
+		定义一个搜索字段：<input type="search" name="googlesearch" />
+		<div><b>tel</b> 定义输入电话号码字段</div>
+		电话号码：<input type="tel" name="usrtel" />
+		<div><b>time</b> 选择一个时间</div>
+		选择时间：<input type="time" name="usr_time" />
+		<div><b>url</b> 包含 URL 地址的输入域</div>
+		URL 地址：<input type="url" name="homepage" />
+		<div><b>week</b> 选择周和年</div>
+		选择周：<input type="week" name="week_year" />
+		<p></p>
+		<div>下面的属性来规定对数字类型的限定：</div>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">disabled</div>
+			<div class="def-width">规定输入字段是禁用的</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">max</div>
+			<div class="def-width">规定允许的最大值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">maxlength</div>
+			<div class="def-width">规定输入字段的最大字符长度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">min</div>
+			<div class="def-width">规定允许的最小值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">pattern</div>
+			<div class="def-width">规定用于验证输入字段的模式</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">readonly</div>
+			<div class="def-width">规定输入字段的值无法修改</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">required</div>
+			<div class="def-width">规定输入字段的值是必需的</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">size</div>
+			<div class="def-width">规定输入字段中的可见字符数</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">step</div>
+			<div class="def-width">规定输入字段的合法数字间隔</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">value</div>
+			<div class="def-width">规定输入字段的默认值</div>
+		</div>
+	</body>
+</html>
