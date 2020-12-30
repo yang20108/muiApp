@@ -1,4 +1,12 @@
-
+.btn-one {
+	width: 100%;
+	height: 40px;
+	color: #FFFFFF;
+	font-size: 15px;
+	border: 0px;
+	border-radius: 4px;
+	background-color: #007AFF;
+}
 .tu-body {
 	width: 50%;height: auto;background-color: #ecf4e6;padding: 10px;box-sizing: border-box;
 	display: flex;
