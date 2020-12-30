@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div>Web SQL 数据库 API 并不是 HTML5 规范的一部分，但是它是一个独立的规范，引入了一组使用 SQL 操作客户端数据库的 APIs。</div>
+		<h3>核心方法</h3>
+		<ol>
+			<li>openDatabase：这个方法使用现有的数据库或者新建的数据库创建一个数据库对象。</li>
+			<li>transaction：这个方法让我们能够控制一个事务，以及基于这种情况执行提交或者回滚。</li>
+			<li>executeSql：这个方法用于执行实际的 SQL 查询。</li>
+		</ol>
+		<button class="btn-one" onclick="openDB()">打开数据库</button>
+		<div>使用 openDatabase() 方法来打开已存在的数据库，如果数据库不存在，则会创建一个新的数据库</div>
+		<div>openDatabase() 方法对应的五个参数说明：</div>
+		<ol>
+			<li>mydb：数据库名称</li>
+			<li>1.0：版本号</li>
+			<li>Test DB：描述文本</li>
+			<li>2 * 1024 * 1024：数据库大小</li>
+			<li>创建回调</li>
+		</ol>
+		<button class="btn-one" onclick="createTable()">创建logs表</button>
+		<div>执行后会在 'mydb' 数据库中创建一个名为 LOGS 的表。</div>
+		<button class="btn-one" onclick="insertData()">logs表插入数据</button>
+		<div style="height: 2px;"></div>
+		<button class="btn-one" onclick="selectData()">logs表读取数据</button>
+		<div id="tableData" style="margin-top: 2px;" class="text-yu-fa">这里是表数据：</div>
+		<div style="height: 2px;"></div>
+		<button class="btn-one" onclick="deleteData()">logs表删除数据</button>
+		<div style="height: 2px;"></div>
+		<button class="btn-one" onclick="updateData()">logs表修改数据</button>
+	</body>
+	<script>
+		var db = null;
+		function openDB() {
+			db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+			console.log("数据库打开成功")
+		}
+		function createTable() {
+			if (db) {
+				db.transaction(function(tx) {
+					tx.executeSql("CREATE TABLE IF NOT EXISTS LOGS (id unique, log)");
+					console.log("数据库 表创建成功")
+				})
+			} else {
+				console.log("数据库未打开")
+			}
+		}
+		function insertData() {
+			if (db) {
+				db.transaction(function(tx) {
+					tx.executeSql("INSERT INTO LOGS (id, log) VALUES (1, '菜鸟教程')");
+					tx.executeSql("INSERT INTO LOGS (id, log) VALUES (?, ?)", [2, 'www.runoob.com']);
+					console.log("表数据插入成功");
+				})
+			} else {
+				console.log("数据库未打开")
+			}
+		}
+		function selectData() {
+			if (db) {
+				db.transaction(function(tx) {
+					tx.executeSql("SELECT * FROM LOGS", [], function(ex, eResults) {
+						var len = eResults.rows.length, i;
+						var lenStr = "查询记录共"+len+"条";
+						var dataStr = "";
+						for (i = 0; i < len; i++) {
+							dataStr += ", " + eResults.rows.item(i).log;
+						}
+						document.getElementById("tableData").innerHTML = "这里是表数据：" + lenStr +
+						"("+ dataStr.substring(1) +")";
+					});
+					console.log("表数据读取成功");
+				})
+			} else {
+				console.log("数据库未打开")
+			}
+		}
+		function deleteData() {
+			if (db) {
+				db.transaction(function(tx) {
+					tx.executeSql("DELETE FROM LOGS WHERE id=?", [1]);
+					document.getElementById("tableData").innerHTML = "这里是表数据：";
+					console.log("表数据删除成功");
+				})
+			} else {
+				console.log("数据库未打开")
+			}
+		}
+		function updateData() {
+			if (db) {
+				db.transaction(function(tx) {
+					tx.executeSql("UPDATE LOGS SET log=\'修改后的数据\' WHERE id=?", [2]);
+					document.getElementById("tableData").innerHTML = "这里是表数据：";
+					console.log("表数据修改成功");
+				})
+			} else {
+				console.log("数据库未打开")
+			}
+		}
+	</script>
+</html>
