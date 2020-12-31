@@ -4,12 +4,14 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
 	</head>
 	<body>
-		<p>Number() 转换为数字</p>
-		<p>String() 转换为字符串</p>
-		<p>Boolean() 转化为布尔值</p>
-		<p>6 种不同的数据类型：</p>
+		<div>Number() 转换为数字</div>
+		<div>String() 转换为字符串</div>
+		<div>Boolean() 转换为布尔值</div>
+		<h3>JavaScript 数据类型</h3>
+		<div>在 JavaScript 中有 6 种不同的数据类型：</div>
 		<ul>
 			<li>string</li>
 			<li>number</li>
@@ -18,20 +20,33 @@
 			<li>function</li>
 			<li>symbol</li>
 		</ul>
-		<p>3 种对象类型</p>
+		<div>3 种对象类型：</div>
 		<ul>
 			<li>Object</li>
 			<li>Date</li>
 			<li>Array</li>
 		</ul>
-		<p>2 个不包含任何值的数据类型</p>
+		<div>2 个不包含任何值的数据类型：</div>
 		<ul>
 			<li>null</li>
 			<li>undefined</li>
 		</ul>
-		<p>在 Date 方法中，你可以查看更多关于日期转换为字符串的函数：</p>
-		<img src="../img/date.png" />
-		<p>将字符串转换为数字、将数字转换为字符串</p>
-		<img src="../img/number.png" />
+		<h3>constructor 属性</h3>
+		<div>constructor 属性返回所有 JavaScript 变量的构造函数。</div>
+		<div class="text-yu-fa">
+			"John".constructor                 // 返回函数 String()  {}<br />
+			(3.14).constructor                 // 返回函数 Number()  {}<br />
+			false.constructor                  // 返回函数 Boolean() {}<br />
+			[1,2,3,4].constructor              // 返回函数 Array()   {}<br />
+			{name:'John', age:34}.constructor  // 返回函数 Object()  {}<br />
+			new Date().constructor             // 返回函数 Date()    {}<br />
+			function () {}.constructor         // 返回函数 Function(){}<br /> 
+		</div>
+		<div style="margin-top: 10px;">可以使用 constructor 属性来查看对象是否为数组 (包含字符串 "Array"):</div>
+		<div class="text-yu-fa">
+			function isArray(myArray) { <br />
+			return myArray.constructor.toString().indexOf("Array") > -1;<br />
+			}<br />
+		</div>
 	</body>
 </html>

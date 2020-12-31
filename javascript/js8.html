@@ -4,11 +4,51 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
 	</head>
 	<body>
-		<p id="demo">?</p>
-		<button onclick="getElementById('demo').innerHTML=Date()">现在时间是</button>
-		<button onclick="this.innerHTML=Date()">现在时间是?</button>
+		<div>HTML 事件是发生在 HTML 元素上的事情。</div>
+		<div>当在 HTML 页面中使用 JavaScript 时， JavaScript 可以触发这些事件。</div>
+		<h3>HTML 事件</h3>
+		<div>HTML 事件可以是浏览器行为，也可以是用户行为。</div>
+		<ul>
+			<li>HTML 页面完成加载</li>
+			<li>HTML input 字段改变时</li>
+			<li>HTML 按钮被点击</li>
+		</ul>
 		<hr />
+		<div>在以下实例中，按钮元素中添加了 onclick 属性 (并加上代码):</div>
+		<p id="demo">现在的时间：?</p>
+		<button class="btn-one" onclick="getElementById('demo').innerHTML='现在的时间：'+Date()">现在时间是</button>
+		<!-- <button onclick="this.innerHTML=Date()">现在时间是?</button> -->
+		<h3>常见的HTML事件</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">事件</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">onchange</div>
+			<div class="def-width">HTML 元素改变</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">onclick</div>
+			<div class="def-width">用户点击 HTML 元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">onmouseover</div>
+			<div class="def-width">用户在一个HTML元素上移动鼠标</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">onmouseout</div>
+			<div class="def-width">用户从一个HTML元素上移开鼠标</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">onkeydown</div>
+			<div class="def-width">用户按下键盘按键</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">onload</div>
+			<div class="def-width">浏览器已完成页面的加载</div>
+		</div>
 	</body>
 </html>
