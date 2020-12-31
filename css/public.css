@@ -76,3 +76,23 @@
 .ban-shi-item:nth-child(even) {
 	background-color: #F6F4F0;
 }
+.ban-shi-grid {
+	display: flex;
+	flex-direction: row;
+	background-color: #F6F4F0;
+	border-top: 1px solid #D4D4D4;
+	border-left: 1px solid #D4D4D4;
+	border-right: 1px solid #D4D4D4;
+}
+.ban-shi-grid:last-child {
+	border-bottom: 1px solid #D4D4D4;
+}
+.ban-shi-grid-item{
+	width: 100%;
+	text-align: center;
+	padding: 5px 0px;
+	border-right: 1px solid #D4D4D4;
+}
+.ban-shi-grid-item:last-child {
+	border-right: 0px;
+}
