@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>typeof 操作符</h3>
+		<div>可以使用 typeof 操作符来检测变量的数据类型。</div>
+		<div class="text-yu-fa">
+			typeof "John"                // 返回 string <br />
+			typeof 3.14                  // 返回 number <br />
+			typeof false                 // 返回 boolean <br />
+			typeof [1,2,3,4]             // 返回 object(Array是一种特殊的对象类型) <br />
+			typeof {name:'John', age:34} // 返回 object <br />
+		</div>
+		<h3>null</h3>
+		<div>在 JavaScript 中 null 表示 "什么都没有"。可以设置为 null 来清空对象:</div>
+		<div class="text-yu-fa">
+			var person = null;           // 值为 null(空), 但类型为对象
+		</div>
+		<div class="text-tips">
+			用 typeof 检测 null 返回是object。
+		</div>
+		<h3>undefined</h3>
+		<div>在 JavaScript 中 undefined 是一个没有设置值的变量。可以设置为 undefined 来清空对象:</div>
+		<div class="text-yu-fa">
+			 var person;                  // 值为 undefined(空), 类型是undefined
+		</div>
+		<div class="text-tips">
+			typeof 一个没有值的变量会返回 undefined。 
+		</div>
+		<h3>undefined 和 null 的区别</h3>
+		<div>null 和 undefined 的值相等，但类型不等：</div>
+		<div class="text-yu-fa">
+			typeof undefined             // undefined<br />
+			typeof null                  // object<br />
+			null === undefined           // false<br />
+			null == undefined            // true<br />
+		</div>
+	</body>
+</html>
