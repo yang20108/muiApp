@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/public.css" />
+	</head>
+	<body>
+		<div>JavaScript 对象是拥有属性和方法的数据。</div>
+		<div style="margin-top: 5px;">以下代码为变量 car 设置值为 "Fiat" </div>
+		<div class="text-yu-fa">var cat = "Fiat";</div>
+		<div style="margin-top: 5px;">对象也是一个变量，但对象可以包含多个值（多个变量）</div>
+		<div class="text-yu-fa">
+			var car = {type:"Fiat", model:500, color:"white"}; 
+		</div>
+		<h3>访问对象属性</h3>
+		<div>可以通过两种方式访问对象属性:</div>
+		<div style="display: flex;align-items: center;">
+			第一种：<div style="width: 30%;" class="text-yu-fa">car.type</div>
+			<div style="margin-left: 10px;"> // 输出"Fiat"</div>
+		</div>
+		<div style="display: flex;align-items: center;margin-top: 5px;">
+			第二种：<div style="width: 30%;" class="text-yu-fa">car["type"]</div>
+			<div style="margin-left: 10px;"> // 输出"Fiat"</div>
+		</div>
+		<h3>对象方法</h3>
+		<div>对象的方法定义了一个函数，并作为对象的属性存储</div>
+		<div>对象方法通过添加 () 调用 (作为一个函数)。</div>
+		<div class="text-yu-fa">name = car.fillName();</div>
+		<div id="carText"></div>
+		<script type="text/javascript">
+			var car = {
+				type:"Fiat",
+				model:500,
+				color:"white",
+				fillName: function() {
+					return "车的颜色" + this.color + "，车的价格" + this.model;
+				}
+			}
+			document.getElementById("carText").innerHTML = "// 输出：" + car.fillName();
+		</script>
+	</body>
+</html>
