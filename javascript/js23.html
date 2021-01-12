@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<div>JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。</div>
+		<div>JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明.</div>
+		<p id="bl" class="text-yu-fa">bl</p>
+		<script type="text/javascript">
+			x = 5; // 变量 x 设置为 5
+			elem = document.getElementById("bl");
+			elem.innerHTML = x;
+			var x; // 声明 x
+			
+			var y; // 声明 y
+			y = 6 // 变量 y 设置为 6
+			elem = document.getElementById("bl");
+			elem.innerHTML = y;
+		</script>
+		<div>变量提升：函数声明和变量声明总是会被解释器悄悄地被"提升"到方法体的最顶部。</div>
+		<h3>JavaScript 初始化不会提升</h3>
+		<div>JavaScript 只有声明的变量会提升，初始化的不会。</div>
+		<p id="csh" class="text-yu-fa"></p>
+		<script type="text/javascript">
+			var z = 5; // 初始化 z
+			var t = 3; // 初始化 t
+			elem = document.getElementById("csh");
+			elem.innerHTML = z + " " + t;
+		</script>
+		<div>示例2</div>
+		<p id="cshh" class="text-yu-fa"></p>
+		<script type="text/javascript">
+			var r; // 初始化 r
+			elem = document.getElementById("cshh");
+			elem.innerHTML = r + " " + e;
+			r = 9;
+			var e = 1;
+		</script>
+		<div>输出了 undefined，这是因为变量声明 (var e) 提升了，但是初始化(e = 1) 并不会提升，所以 e 变量是一个未定义的变量。</div>
+	</body>
+</html>

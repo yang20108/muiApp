@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<div>JSON 是用于存储和传输数据的格式。</div>
+		<div>JSON 通常用于服务端向网页传递数据 。</div>
+		<h3>什么是 JSON?</h3>
+		<ul>
+			<li>JSON 英文全称 JavaScript Object Notation</li>
+			<li>JSON 是一种轻量级的数据交换格式。</li>
+			<li>JSON是独立的语言 *</li>
+			<li>JSON 易于理解。</li>
+		</ul>
+		<h3>JSON 语法规则</h3>
+		<ul>
+			<li>数据为 键/值 对</li>
+			<li>数据由逗号分隔</li>
+			<li>大括号保存对象</li>
+			<li>方括号保存数组</li>
+		</ul>
+		<h3>JSON 数据 一个名称对应一个值</h3>
+		<div>JSON 数据格式为 键/值 对，就像 JavaScript 对象属性</div>
+		<div>键/值对包括字段名称（在双引号中），后面一个冒号，然后是值</div>
+		<div class="text-yu-fa">
+			"name":"Runoob"
+		</div>
+		<h3>JSON 对象</h3>
+		<div>JSON 对象保存在大括号内</div>
+		<div>就像在 JavaScript 中, 对象可以保存多个 键/值 对</div>
+		<div class="text-yu-fa">
+			{"name":"Runoob", "url":"www.runoob.com"} 
+		</div>
+		<h3>JSON 数组</h3>
+		<div>JSON 数组保存在中括号内</div>
+		<div>就像在 JavaScript 中, 数组可以包含对象</div>
+		<div class="text-yu-fa">
+			"sites":[<br />
+			    {"name":"Runoob", "url":"www.runoob.com"},<br />
+			    {"name":"Google", "url":"www.google.com"},<br />
+			    {"name":"Taobao", "url":"www.taobao.com"}<br />
+			]
+		</div>
+		<h3>相关函数</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">函数</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">JSON.parse()</div>
+			<div class="def-width">用于将一个 JSON 字符串转换为 JavaScript 对象</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">JSON.stringify()</div>
+			<div class="def-width">用于将 JavaScript 值转换为 JSON 字符串</div>
+		</div>
+	</body>
+</html>
