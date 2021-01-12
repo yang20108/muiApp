@@ -4,11 +4,205 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
 	</head>
 	<body>
-		<p>let 声明的变量只在 let 命令所在的代码块内有效。</p>
-		<p>const 声明一个只读的常量，一旦声明，常量的值就不能改变。</p>
-		<p><strong>全局变量:</strong>在函数外声明的变量作用域是全局的</p>
-		<p><strong>局部变量:</strong>在函数内声明的变量作用域是局部的（函数内）</p>
+		<h3>JavaScript let 和 const</h3>
+		<div>ES2015(ES6) 新增加了两个重要的 JavaScript 关键字: <b>let</b> 和 <b>const</b>。</div>
+		<div>let 声明的变量只在 let 命令所在的代码块内有效</div>
+		<div>const 声明一个只读的常量，一旦声明，常量的值就不能改变。</div>
+		<div>在 ES6 之前，JavaScript 只有两种作用域： <b>全局变量</b> 与 <b>函数内的局部变量</b>。</div>
+		<h3>全局变量</h3>
+		<div>在函数外声明的变量作用域是全局的。全局变量在 JavaScript 程序的任何地方都可以访问</div>
+		<div class="text-yu-fa">
+			var carName = "Thccxw"; <br />
+			// 这里可以使用 carName 变量 <br />
+			function myFun() { <br />
+				// 这里也可以使用 carName 变量 <br />
+			}
+		</div>
+		<h3>局部变量</h3>
+		<div>在函数内声明的变量作用域是局部的（函数内）：</div>
+		<div class="text-yu-fa">
+			// 这里不能使用 carName 变量 <br />
+			function myFun() { <br />
+				var carName = "Tsbsc?"; <br />
+				// 这里可以使用 carName 变量 <br />
+			} <br />
+			// 这里不能使用 carName 变量
+		</div>
+		<div>函数内使用 var 声明的变量只能在函数内容访问，如果不使用 var 则是全局变量。</div>
+		<h3>JavaScript 块级作用域(Block Scope)</h3>
+		<div>使用 var 关键字声明的变量不具备块级作用域的特性，它在 {} 外依然能被访问到。</div>
+		<div class="text-yu-fa">
+			{ <br />
+				var x = 2; <br/>
+			} <br />
+			// 这里可以使用 x 变量
+		</div>
+		<div>在 ES6 之前，是没有块级作用域的概念的</div>
+		<div>ES6 可以使用 let 关键字来实现块级作用域。</div>
+		<div>let 声明的变量只在 let 命令所在的代码块 {} 内有效，在 {} 之外不能访问</div>
+		<div class="text-yu-fa">
+			{ <br />
+				let y = 3; <br />
+				// 这里可以使用 y 变量 <br />
+			} <br />
+			// 这里不能使用 y 变量
+		</div>
+		<h3>重新定义变量</h3>
+		<div>使用 var 关键字重新声明变量可能会带来问题。在块中重新声明变量也会重新声明块外的变量：</div>
+		<div class="text-yu-fa">
+			var x = 10; <br />
+			// 这里输出 x 为 10 <br />
+			{ <br />
+				<b>var</b> x = 2; <br />
+				// 这里输出 x 为 2<br />
+			} <br />
+			// 这里输出 x 为 2
+		</div>
+		<div>let 关键字就可以解决这个问题，因为它只在 let 命令所在的代码块 {} 内有效。</div>
+		<div class="text-yu-fa">
+			var x = 10; <br />
+			// 这里输出 x 为 10 <br />
+			{ <br />
+				<b>let</b> x = 2; <br />
+				// 这里输出 x 为 2<br />
+			} <br />
+			// 这里输出 x 为 10
+		</div>
+		<h3>循环作用域</h3>
+		<div>使用 var 关键字：</div>
+		<div class="text-yu-fa">
+			var i = 5;<br />
+			for (<b>var</b> i = 0; i &lt; 10; i++) { <br />
+			    // 一些代码... <br />
+			} <br />
+			// 这里输出 i 为 10
+		</div>
+		<div>使用 let 关键字：</div>
+		<div class="text-yu-fa">
+			var i = 5;<br />
+			for (<b>let</b> i = 0; i &lt; 10; i++) { <br />
+			    // 一些代码... <br />
+			} <br />
+			// 这里输出 i 为 5
+		</div>
+		<div>在第一个实例中，使用了 var 关键字，它声明的变量是全局的，包括循环体内与循环体外。 </div>
+		<div>在第二个实例中，使用 let 关键字， 它声明的变量作用域只在循环体内，循环体外的变量不受影响。 </div>
+		<h3>局部变量</h3>
+		<div>它们的作用域都是 <b>局部的</b>:</div>
+		<div class="text-yu-fa">
+			function myFunction() { <br />
+				<b>var</b> carName = "Volvo";   // 局部作用域 <br />
+			}<br />
+			function myFunction() {<br />
+				<b>let</b> carName = "Volvo";   //  局部作用域<br />
+			}
+		</div>
+		<h3>全局变量</h3>
+		<div>它们的作用域都是 <b>全局的</b>:</div>
+		<div class="text-yu-fa">
+			<b>var</b> x = 2;       // 全局作用域 <br />
+			<b>let</b> x = 2;       // 全局作用域 <br />
+		</div>
+		<h3>重置变量</h3>
+		<div>使用 var 关键字声明的变量在任何地方都可以修改：</div>
+		<div class="text-yu-fa">
+			var x = 2;<br />
+			// x 输出 2<br />
+			var x = 3;<br />
+			// 现在 x 输出 3
+		</div>
+		<div>在相同的作用域或块级作用域中，不能使用 let 关键字来重置 var 关键字声明的变量:</div>
+		<div class="text-yu-fa">
+			var x = 2;       // 合法<br/>
+			let x = 3;       // 不合法<br/>
+			{<br/>
+			    var x = 4;   // 合法<br/>
+			    let x = 5   // 不合法<br/>
+			}
+		</div>
+		<div>在相同的作用域或块级作用域中，不能使用 let 关键字来重置 let 关键字声明的变量</div>
+		<div class="text-yu-fa">
+			let x = 2;       // 合法<br />
+			let x = 3;       // 不合法<br />
+			{<br />
+			    let x = 4;   // 合法<br />
+			    let x = 5;   // 不合法<br />
+			}
+		</div>
+		<div>在相同的作用域或块级作用域中，不能使用 var 关键字来重置 let 关键字声明的变量:</div>
+		<div class="text-yu-fa">
+			let x = 2;       // 合法<br />
+			var x = 3;       // 不合法<br />
+			{<br />
+			    let x = 4;   // 合法<br />
+			    var x = 5;   // 不合法<br />
+			}
+		</div>
+		<div>let 关键字在不同作用域，或不同块级作用域中是可以重新声明赋值的:</div>
+		<div class="text-yu-fa">
+			let x = 2;       // 合法<br />
+			{<br />
+			    let x = 3;   // 合法<br />
+			}<br />
+			{<br />
+			    let x = 4;   // 合法<br />
+			}
+		</div>
+		<h3>变量提升</h3>
+		<div>JavaScript 中，var 关键字定义的变量可以在使用后声明，也就是变量可以先使用再声明</div>
+		<div class="text-yu-fa">
+			// 在这里可以使用 carName 变量<br />
+			<b>var</b> carName;
+		</div>
+		<div>let 关键字定义的变量则不可以在使用后声明，也就是变量需要先声明再使用。</div>
+		<div class="text-yu-fa">
+			// 在这里不可以使用 carName 变量<br />
+			<b>let</b> carName;
+		</div>
+		<h3>const 关键字</h3>
+		<div>const 用于声明一个或多个常量，声明时<b>必须进行初始化</b>，且<b>初始化后值不可再修改</b>：</div>
+		<div class="text-yu-fa">
+			const PI = 3.141592653589793;<br />
+			PI = 3.14;      // 报错<br />
+			PI = PI + 10;   // 报错
+		</div>
+		<br />
+		<div>const定义常量与使用let 定义的变量相似：</div>
+		<ul>
+			<li>二者都是块级作用域</li>
+			<li>都不能和它所在作用域内的其他变量或函数拥有相同的名称</li>
+		</ul>
+		<div>两者还有以下两点区别：</div>
+		<ul>
+			<li>const声明的常量必须初始化，而let声明的变量不用</li>
+			<li>const 定义常量的值不能通过再赋值修改，也不能再次声明。而 let 定义的变量值可以修改。</li>
+		</ul>
+		<h3>并非真正的常量</h3>
+		<div>const 的本质: const 定义的变量并非常量，并非不可变，它定义了一个常量引用一个值。</div>
+		<div>使用 const 定义的对象或者数组，其实是可变的。下面的代码并不会报错：</div>
+		<div class="text-yu-fa">
+			// 创建常量对象<br />
+			const car = {type:"Fiat", model:"500", color:"white"};<br />
+			// 修改属性:<br />
+			car.color = "red";<br />
+			// 添加属性<br />
+			car.owner = "Johnson";<br /><br />
+			// 创建常量数组<br />
+			const cars = ["Saab", "Volvo", "BMW"];<br />
+			// 修改元素<br />
+			cars[0] = "Toyota";<br />
+			// 添加元素<br />
+			cars.push("Audi");
+		</div>
+		<div>但是我们不能对常量对象,数组重新赋值：</div>
+		<div class="text-yu-fa">
+			const car = {type:"Fiat", model:"500", color:"white"};<br />
+			car = {type:"Volvo", model:"EX60", color:"red"};    // 错误<br /><br />
+			const cars = ["Saab", "Volvo", "BMW"];<br />
+			cars = ["Toyota", "Volvo", "Audi"];    // 错误<br />
+		</div>
 	</body>
 </html>

@@ -4,14 +4,120 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
 	</head>
 	<body>
-		<p>正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。</p>
-		<p>什么是正则表达式？正则表达式是由一个字符序列形成的搜索模式。当你在文本中搜索数据时，你可以用搜索模式来描述你要查询的内容。正则表达式可以是一个简单的字符，或一个更复杂的模式。正则表达式可用于所有文本搜索和文本替换的操作。</p>
-		<p>search() 方法 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。</p>
-		<p>replace() 方法 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
-		<p>test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本返回Boolean类型。</p>
-		<p>exec() 方法用于检索字符串中的正则表达式的匹配。</p>
-		<img src="../img/regexp.png" />
+		<div>正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。</div>
+		<div>搜索模式可用于文本搜索和文本替换。</div>
+		<h3>什么是正则表达式？</h3>
+		<div>正则表达式是由一个字符序列形成的搜索模式</div>
+		<div>当你在文本中搜索数据时，你可以用搜索模式来描述你要查询的内容</div>
+		<div>正则表达式可以是一个简单的字符，或一个更复杂的模式</div>
+		<div>正则表达式可用于所有文本搜索和文本替换的操作</div>
+		<h3>使用字符串方法</h3>
+		<div>在 JavaScript 中，正则表达式通常用于两个字符串方法 : search() 和 replace()</div>
+		<div><b>search() 方法</b>用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置</div>
+		<div><b>replace() 方法</b>用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串</div>
+		<script type="text/javascript">
+			var str = "Visit Runoob!"; // 是一个正则表达式主体 (用于检索)。
+			var n = str.search(/Runoob/i); // /Runoob/i  是一个正则表达式。i 是一个修饰符 (搜索不区分大小写)。
+			console.log("n: ",n);
+			var txt = str.replace(/Runoob/i, "Microsoft");
+			console.log("txt: ",txt);
+			var n2 = str.search("Runoob");
+			console.log("n2: ",n2);
+			var txt2 = str.replace("Microsoft","Runoob");
+			console.log("txt2: ",txt2);
+		</script>
+		<h3>正则表达式修饰符</h3>
+		<div>修饰符 可以在全局搜索中不区分大小写:</div>
+		<div class="ban-shi-title">
+			<div class="def-width">修饰符</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">i</div>
+			<div class="def-width">执行对大小写不敏感的匹配</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">g</div>
+			<div class="def-width">执行全局匹配</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">m</div>
+			<div class="def-width">执行多行匹配</div>
+		</div>
+		<h3>正则表达式模式</h3>
+		<div>方括号用于查找某个范围内的字符：</div>
+		<div class="ban-shi-title">
+			<div class="def-width">表达式</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">[abc]</div>
+			<div class="def-width">查找方括号之间的任何字符</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">[0-9]</div>
+			<div class="def-width">查找任何从 0 至 9 的数字</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">(x|y)</div>
+			<div class="def-width">查找任何以 | 分隔的选项</div>
+		</div>
+		<div>元字符是拥有特殊含义的字符：</div>
+		<div class="ban-shi-title">
+			<div class="def-width">元字符</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">\d</div>
+			<div class="def-width">查找数字</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">\s</div>
+			<div class="def-width">查找空白字符</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">\b</div>
+			<div class="def-width">匹配单词边界</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">\uxxxx</div>
+			<div class="def-width">查找以十六进制数 xxxx 规定的 Unicode 字符</div>
+		</div>
+		<div>量词：</div>
+		<div class="ban-shi-title">
+			<div class="def-width">量词</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">n+</div>
+			<div class="def-width">匹配任何包含至少一个 n 的字符串</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">n*</div>
+			<div class="def-width">匹配任何包含零个或多个 n 的字符串</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">n?</div>
+			<div class="def-width">匹配任何包含零个或一个 n 的字符串</div>
+		</div>
+		<h3>使用 RegExp 对象</h3>
+		<div>在 JavaScript 中，RegExp 对象是一个预定义了属性和方法的正则表达式对象</div>
+		<h3>使用 test()</h3>
+		<div>test() 方法是一个正则表达式方法。</div>
+		<div>test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。</div>
+		<script type="text/javascript">
+			var patt = /e/.test("abcdefg"); // 搜索字符串中的字符 "e"
+			console.log("patt: ",patt);
+		</script>
+		<h3>使用 exec()</h3>
+		<div>exec() 方法是一个正则表达式方法</div>
+		<div>exec() 方法用于检索字符串中的正则表达式的匹配</div>
+		<script type="text/javascript">
+			var paff = /e/.exec("abcdefg");
+			console.log("paff: ",paff);
+		</script>
 	</body>
 </html>

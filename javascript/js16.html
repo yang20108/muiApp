@@ -6,10 +6,10 @@
 		<title></title>
 	</head>
 	<body>
+		<h3>自调用函数</h3>
 		<p>函数表达式可以 "自调用"。如果表达式后面紧跟 () ，则会自动调用。</p>
 		<p>ES6 新增了箭头函数。如果函数部分只是一个语句，则可以省略 return 关键字和大括号 {}</p>
 		<p>ES5 中如果函数在调用时未提供隐式参数，参数会默认设置为： undefined</p>
-		<p>ES6 函数可以自带参数</p>
 		<script type="text/javascript">
 			// 通过添加括号，来说明它是一个函数表达式(匿名自我调用的函数)
 			(function() {
@@ -31,6 +31,10 @@
 				return 8 + 5;
 			}
 			console.log("s: ", s());
+		</script>
+		<h3>函数显式参数(Parameters)与隐式参数(Arguments)</h3>
+		<div>ES6 函数可以自带参数</div>
+		<script type="text/javascript">
 			// ES5默认参数
 			function funES5(n1, n2) {
 				// 如果n2已经定义，n2 || 返回n2,因为n2是true,否则返回0,因为undefined为false

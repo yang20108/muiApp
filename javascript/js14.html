@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
 	</head>
 	<body>
 		<p>try 语句测试代码块的错误。</p>
@@ -11,6 +12,18 @@
 		<p>throw 语句创建自定义错误。</p>
 		<p>finally 语句在 try 和 catch 语句之后，无论是否有触发异常，该语句都会执行。</p>
 		<hr />
+		<h3>JavaScript try 和 catch</h3>
+		<div><b>try</b>语句允许我们定义在执行时进行错误测试的代码块。</div>
+		<div><b>catch</b>语句允许我们定义当 try 代码块发生错误时，所执行的代码块。</div>
+		<div class="text-yu-fa">
+			try { <br />
+				... // 异常的抛出 <br />
+			} catch(e) { <br />
+				...    //异常的捕获与处理 <br />
+			} finally { <br />
+				 ...    //结束处理<br />
+			}
+		</div>
 		<p>示例：请输入 5 ~ 10 之间的数字</p>
 		<input id="demo" type="text" />
 		<button type="button" onclick="bindCheck()">点我验证</button>
