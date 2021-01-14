@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<title></title>
+		<style type="text/css">
+			html {
+				height: 100%;
+			}
+
+			html,
+			body,
+			div {
+				margin: 0;
+				padding: 0;
+			}
+
+			#box {
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform-style: preserve-3d;
+				perspective: 400px;
+				perspective-origin: 50% 0%;
+				overflow: hidden;
+			}
+
+			.flower {
+				position: absolute;
+				top: 150px;
+				width: 100px;
+				height: 100px;
+				border-top-left-radius: 35%;
+				border-top-right-radius: 35%;
+				border-bottom-left-radius: 50%;
+				border-bottom-right-radius: 50%;
+				transform-origin: center bottom;
+				background: -moz-linear-gradient(top, #F00, #111);
+				background: -webkit-linear-gradient(top, #F00, #111);
+				background: linear-gradient(to top, #F00, #111);
+			}
+
+			.leaf {
+				position: absolute;
+				top: 150px;
+				width: 40px;
+				height: 100px;
+				border-top-left-radius: 50%;
+				border-top-right-radius: 50%;
+				border-bottom-left-radius: 50%;
+				border-bottom-right-radius: 50%;
+				transform-origin: center bottom;
+				background: -moz-linear-gradient(top, #0F0, #111);
+				background: -webkit-linear-gradient(top, #0F0, #111);
+				background: linear-gradient(to top, #0F0, #111);
+			}
+
+			.branch {
+				position: absolute;
+				top: 270px;
+				width: 30px;
+				height: 400px;
+				background: #0f0;
+				background: -moz-linear-gradient(left, #0F0, #111);
+				background: -webkit-linear-gradient(left, #0F0, #111);
+				background: linear-gradient(to left, #0F0, #111);
+			}
+		</style>
+	</head>
+	<body bgcolor="#000000">
+		<div id="box" style="width: 375px; height: 667px;">
+			<div id="branch" class="branch" style="left: 172.5px;"></div>
+			<!-- <div class="flower" id="div_0" style="z-index: 2954; left: 137.5px; transform: rotateX(-14.6736deg) rotateZ(2.58736deg) rotateY(10deg) translateZ(30px) scale(0.7);"></div>
+			<div class="flower" id="div_1" style="z-index: -521; left: 137.5px; transform: rotateX(2.58736deg) rotateZ(14.6736deg) rotateY(100deg) translateZ(30px) scale(0.7);"></div>
+			<div class="flower" id="div_2" style="z-index: -2954; left: 137.5px; transform: rotateX(14.6736deg) rotateZ(-2.58736deg) rotateY(190deg) translateZ(30px) scale(0.7);"></div>
+			<div class="flower" id="div_3" style="z-index: 521; left: 137.5px; transform: rotateX(-2.58736deg) rotateZ(-14.6736deg) rotateY(280deg) translateZ(30px) scale(0.7);"></div>
+			<div class="flower" id="div_4" style="z-index: 0; left: 137.5px; transform: rotateX(3.65557e-15deg) rotateZ(-19.9deg) rotateY(270deg) translateZ(45px) scale(0.8);"></div>
+			<div class="flower" id="div_5" style="z-index: 3897; left: 137.5px; transform: rotateX(-17.2339deg) rotateZ(-9.95deg) rotateY(330deg) translateZ(45px) scale(0.8);"></div>
+			<div class="flower" id="div_6" style="z-index: 3897; left: 137.5px; transform: rotateX(-17.2339deg) rotateZ(9.95deg) rotateY(390deg) translateZ(45px) scale(0.8);"></div>
+			<div class="flower" id="div_7" style="z-index: 0; left: 137.5px; transform: rotateX(-6.09262e-15deg) rotateZ(19.9deg) rotateY(450deg) translateZ(45px) scale(0.8);"></div>
+			<div class="flower" id="div_8" style="z-index: -3897; left: 137.5px; transform: rotateX(17.2339deg) rotateZ(9.95deg) rotateY(510deg) translateZ(45px) scale(0.8);"></div>
+			<div class="flower" id="div_9" style="z-index: -3897; left: 137.5px; transform: rotateX(17.2339deg) rotateZ(-9.95deg) rotateY(570deg) translateZ(45px) scale(0.8);"></div>
+			<div class="flower" id="div_10" style="z-index: -4596; left: 137.5px; transform: rotateX(15.2443deg) rotateZ(12.7915deg) rotateY(500deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_11" style="z-index: -5977; left: 137.5px; transform: rotateX(19.8243deg) rotateZ(-1.7344deg) rotateY(545deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_12" style="z-index: -3857; left: 137.5px; transform: rotateX(12.7915deg) rotateZ(-15.2443deg) rotateY(590deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_13" style="z-index: 523; left: 137.5px; transform: rotateX(-1.7344deg) rotateZ(-19.8243deg) rotateY(635deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_14" style="z-index: 4596; left: 137.5px; transform: rotateX(-15.2443deg) rotateZ(-12.7915deg) rotateY(680deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_15" style="z-index: 5977; left: 137.5px; transform: rotateX(-19.8243deg) rotateZ(1.7344deg) rotateY(725deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_16" style="z-index: 3857; left: 137.5px; transform: rotateX(-12.7915deg) rotateZ(15.2443deg) rotateY(770deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_17" style="z-index: -523; left: 137.5px; transform: rotateX(1.7344deg) rotateZ(19.8243deg) rotateY(815deg) translateZ(60px) scale(0.9);"></div>
+			<div class="flower" id="div_18" style="z-index: -2907; left: 137.5px; transform: rotateX(6.8062deg) rotateZ(-18.6999deg) rotateY(610deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_19" style="z-index: 1476; left: 137.5px; transform: rotateX(-3.4556deg) rotateZ(-19.5977deg) rotateY(640deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_20" style="z-index: 5464; left: 137.5px; transform: rotateX(-12.7915deg) rotateZ(-15.2443deg) rotateY(670deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_21" style="z-index: 7987; left: 137.5px; transform: rotateX(-18.6999deg) rotateZ(-6.8062deg) rotateY(700deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_22" style="z-index: 8371; left: 137.5px; transform: rotateX(-19.5977deg) rotateZ(3.4556deg) rotateY(730deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_23" style="z-index: 6511; left: 137.5px; transform: rotateX(-15.2443deg) rotateZ(12.7915deg) rotateY(760deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_24" style="z-index: 2907; left: 137.5px; transform: rotateX(-6.8062deg) rotateZ(18.6999deg) rotateY(790deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_25" style="z-index: -1476; left: 137.5px; transform: rotateX(3.4556deg) rotateZ(19.5977deg) rotateY(820deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_26" style="z-index: -5464; left: 137.5px; transform: rotateX(12.7915deg) rotateZ(15.2443deg) rotateY(850deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_27" style="z-index: -7987; left: 137.5px; transform: rotateX(18.6999deg) rotateZ(6.8062deg) rotateY(880deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_28" style="z-index: -8371; left: 137.5px; transform: rotateX(19.5977deg) rotateZ(-3.4556deg) rotateY(910deg) translateZ(85px) scale(1);"></div>
+			<div class="flower" id="div_29" style="z-index: -6511; left: 137.5px; transform: rotateX(15.2443deg) rotateZ(-12.7915deg) rotateY(940deg) translateZ(85px) scale(1);"></div>
+			<div class="leaf" id="div_30" style="z-index: 6106; left: 168px; transform: rotateX(-28.8612deg) rotateZ(-34.3954deg) rotateY(1390deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_31" style="z-index: 9464; left: 168px; transform: rotateX(-44.7291deg) rotateZ(-3.91329deg) rotateY(1435deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_32" style="z-index: 7277; left: 168px; transform: rotateX(-34.3954deg) rotateZ(28.8612deg) rotateY(1480deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_33" style="z-index: 828; left: 168px; transform: rotateX(-3.91329deg) rotateZ(44.7291deg) rotateY(1525deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_34" style="z-index: -6106; left: 168px; transform: rotateX(28.8612deg) rotateZ(34.3954deg) rotateY(1570deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_35" style="z-index: -9464; left: 168px; transform: rotateX(44.7291deg) rotateZ(3.91329deg) rotateY(1615deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_36" style="z-index: -7277; left: 168px; transform: rotateX(34.3954deg) rotateZ(-28.8612deg) rotateY(1660deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_37" style="z-index: -828; left: 168px; transform: rotateX(3.91329deg) rotateZ(-44.7291deg) rotateY(1705deg) translateZ(95px) scale(1.2);"></div>
+			<div class="leaf" id="div_38" style="top: 280px; z-index: -1710; left: 168px; transform: rotateX(25.6515deg) rotateZ(70.4769deg) rotateY(6950deg) translateZ(50px) scale(1.2);"></div>
+			<div class="leaf" id="div_39" style="top: 310px; z-index: 1710; left: 168px; transform: rotateX(-25.6515deg) rotateZ(-70.4769deg) rotateY(7130deg) translateZ(50px) scale(1.2);"></div> -->
+		</div>
+		<script>
+			box.style.width = window.innerWidth + "px";
+			box.style.height = window.innerHeight + "px";
+			branch.style.left = (window.innerWidth - 30) / 2 + "px";
+			var deg = -55;
+
+			var fragment = document.createDocumentFragment();
+			for (var i = 0; i < 40; i++) {
+				var div = document.createElement("div");
+				div.className = i < 30 ? "flower" : "leaf";
+				if (i >= 38) {
+					div.style.top = 250 + (i - 37) * 30 + "px";
+				}
+				div.id = "div_" + i;
+				var info = getInfoByIndex(i);
+				div.style.zIndex = Math.round(100 * Math.cos(info.deg / 360 * Math.PI * 2) * info.translate);
+				div.style.left = info.left + "px";
+				var skew = i < 38 ? 0 : info.skew;
+				div.style.transform = "rotateX(" + (Math.cos(info.deg / 360 * Math.PI * 2) * (-skew)) + "deg) rotateZ(" + Math.sin(
+						info.deg / 360 * Math.PI * 2) * (skew) + "deg) rotateY(" + (info.deg) + "deg) translateZ(" + info.translate +
+					"px) scale(" + info.scale + ")";
+				fragment.appendChild(div);
+			}
+			box.appendChild(fragment);
+
+			function getInfoByIndex(i) {
+				var info = {
+					left: (window.innerWidth - 100) / 2
+				};
+				if (i < 4) {
+					info.deg = 10 + 90 * i;
+					info.translate = 30;
+					info.scale = 0.7;
+					info.skew = 15;
+				} else if (i < 10) {
+					info.deg = 30 + 60 * i;
+					info.translate = 45;
+					info.scale = 0.8;
+					info.skew = 20;
+				} else if (i < 18) {
+					info.deg = 50 + 45 * i;
+					info.translate = 60;
+					info.scale = 0.9;
+					info.skew = 20;
+				} else if (i < 30) {
+					info.deg = 70 + 30 * i;
+					info.translate = 85;
+					info.scale = 1;
+					info.skew = 20;
+				} else if (i < 38) {
+					info.deg = 20 + 45 * i + 20;
+					info.translate = 95
+					info.scale = 1.2;
+					info.skew = 45;
+					info.left = Math.round((window.innerWidth - 40) / 2);
+				} else {
+					info.deg = 90 + 180 * i + 20;
+					info.translate = 50
+					info.scale = 1.2;
+					info.skew = 75;
+					info.left = Math.round((window.innerWidth - 40) / 2);
+				}
+				return info;
+			}
+
+			function step() {
+				for (var i = 0; i < 38; i++) {
+					var info = getInfoByIndex(i);
+					var skew = Math.max(0, deg + info.skew);
+					document.getElementById("div_" + i).style.transform = "rotateX(" + (Math.cos(info.deg / 360 * Math.PI * 2) * (-
+							skew)) + "deg) rotateZ(" + Math.sin(info.deg / 360 * Math.PI * 2) * (skew) + "deg) rotateY(" + (info.deg) +
+						"deg) translateZ(" + info.translate + "px) scale(" + info.scale + ")";
+				}
+				deg += 0.3;
+				if (deg < 0) {
+					requestAnimationFrame(step);
+				}
+			}
+			requestAnimationFrame(step);
+		</script>
+
+	</body>
+</html>
