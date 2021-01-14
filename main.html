@@ -9,8 +9,7 @@
 		<title>Java Script</title>
 		<link rel="stylesheet" href="css/mui.min.css" />
 		<script src="js/mui.min.js"></script>
-		<!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
-		<!-- JavaScript教程 https://www.runoob.com/jquery/jquery-tutorial.html -->
+		<!-- JavaScript教程 https://www.runoob.com/css/css-id-class.html -->
 	</head>
 	<body>
 		<div class="mui-content" style="height: 100%;">
@@ -188,7 +187,27 @@
 					</ul>
 				</div>
 			</div>
-			<div id="item3" class="mui-control-content"></div>
+			<div id="item3" class="mui-control-content">
+				<div class="mui-scroll-wrapper mui-scroll">
+					<ul class="bo-ul">
+						<li id="css/css1.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">教程
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="css/css2.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">简介
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="css/css3.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">语法
+								<div class="chs"></div>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
 			<div id="item2" class="mui-control-content">
 				<div class="mui-scroll-wrapper mui-scroll">
 					<ul class="bo-ul">
@@ -375,7 +394,12 @@
 							</span>
 						</li>
 						<li id="test/test_fish.html" onclick="bindClick(this.id, 'Title')">
-							<span class="item">Json动画
+							<span class="item">小鱼跳水
+								<div class="chs">Json动画</div>
+							</span>
+						</li>
+						<li id="test/flower.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">玫瑰花盛开
 								<div class="chs"></div>
 							</span>
 						</li>
