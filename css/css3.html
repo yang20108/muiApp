@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			h1 {
+				color:blue;
+				font-size:12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>CSS 规则由两个主要的部分构成：<b>选择器</b>，以及一条或多条<b>声明</b>:</div>
+		<div style="margin: 10px;padding: 10px;box-sizing: border-box;">
+			<div class="uni-flex xuan-ze-qi">
+				<div style="margin-right: 10px;" class="uni-flex-column">
+					<div>选择器</div>
+					<div style="height: 16px;"></div>
+					<div class="xuan-box">h1</div>
+				</div>
+				<div style="text-align: center;">
+					<div>声明</div>
+					<div style="width: auto;margin-bottom: 5px;" class="sync-zhi-xing"></div>
+					<div class="xuan-box2">{color:blue;</div>
+					<div>属性 &nbsp;值</div>
+				</div>
+				<div style="text-align: center;">
+					<div>声明</div>
+					<div style="width: auto;margin-bottom: 5px;" class="sync-zhi-xing"></div>
+					<div class="xuan-box3"> font-size:12px;}</div>
+					<div>属性 &nbsp;值</div>
+				</div>
+			</div>
+			<h1>这是h1，颜色是蓝色，字体大小是12px</h1>
+		</div>
+		<div><b>选择器:</b>通常是您需要改变样式的 HTML 元素。</div>
+		<div><b>声明:</b>每条声明由一个属性和一个值组成。</div>
+		<div><b>属性:</b>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被<b>冒号</b>分开</div>
+		<h3>CSS 注释</h3>
+		<div>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。</div>
+		<div>CSS注释以 <span class="def-bgc-tips">/*</span> 开始, 以 <span class="def-bgc-tips">*/</span> 结束, 实例如下:</div>
+		<div class="text-yu-fa">
+			/* 这是个注释 给p元素添加样式 */<br />
+			p {<br />
+				text-align:center;<br />
+				/* 这是另一个注释 字体颜色使用黑色 */<br />
+				color:black;<br />
+				font-family:arial;<br />
+			}
+		</div>
+		
+	</body>
+</html>
