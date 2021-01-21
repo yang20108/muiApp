@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			.color-box {
+				margin-right: 10px;
+				text-align: center;
+				color: #FFFFFF;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>CSS 背景属性用于定义HTML元素的背景</div>
+		<ul>
+			<li>background-color</li>
+			<li>background-image</li>
+			<li>background-repeat</li>
+			<li>background-attachment</li>
+			<li>background-position</li>
+		</ul>
+		<h3>背景颜色</h3>
+		<div>background-color 属性定义了元素的背景颜色.</div>
+		<div class="text-yu-fa">
+			style="background-color: #ff0000;"
+		</div>
+		<div style="margin-top: 5px;background-color: #ff0000;width: 100px;height: 50px;"></div>
+		<div>CSS中，颜色值通常以以下方式定义:</div>
+		<ul>
+			<li>十六进制 - 如："#ff0000"</li>
+			<li>RGB - 如："rgb(255,0,0)"</li>
+			<li>颜色名称 - 如："red"</li>
+		</ul>
+		<div style="display: flex;">
+			<div style="background-color: #ff0000;" class="color-box">#ff0000</div>
+			<div style="background-color: rgb(255,0,0);padding: 20px 10px;" class="color-box">rgb(255,0,0)</div>
+			<div style="background-color: red;padding: 20px 40px;" class="color-box">red</div>
+		</div>
+		<h3>背景图像</h3>
+		<div>background-image 属性描述了元素的背景图像.</div>
+		<div>默认情况下，背景图像进行平铺重复显示，以覆盖整个元素实体.</div>
+		<div style="width: 100%;height: 200px;border: 1px solid #000000;
+		background-image: url(../img/html5.gif);"></div>
+		<h3>背景图像- 设置定位与平铺</h3>
+		<div style="margin: 5px 0px;">如果图像只在水平方向平铺 (repeat-x):</div>
+		<div style="width: 100%;height: 200px;border: 1px solid #000000;
+		background-image: url(../img/html5.gif);background-repeat: repeat-x;"></div>
+		<div style="margin: 5px 0px;">如果图像只在水平方向平铺 (repeat-y):</div>
+		<div style="width: 100%;height: 200px;border: 1px solid #000000;
+		background-image: url(../img/html5.gif);background-repeat: repeat-y;"></div>
+		<div style="margin: 5px 0px;">如果不想让图像平铺 (no-repeat):</div>
+		<div style="width: 100%;height: 200px;border: 1px solid #000000;
+		background-image: url(../img/html5.gif);background-repeat: no-repeat;"></div>
+		<h3>背景图像- 设置图像在背景中的位置</h3>
+		<div>可以利用 background-position 属性改变图像在背景中的位置: (right top位置)</div>
+		<div style="width: 100%;height: 200px;border: 1px solid #000000;
+		background-image: url(../img/html5.gif);background-repeat: no-repeat;background-position: right top;"></div>
+		<h3>背景- 简写属性</h3>
+		<div>为了简化这些属性的代码，我们可以将这些属性合并在同一个属性中</div>
+		<div class="text-yu-fa">
+			div {background:#ffffff url(../img/html5.gif) no-repeat right top;}
+		</div>
+		<div style="width: 100%;height: 200px;border: 1px solid #000000;margin-top: 5px;
+		background: #ffffff url(../img/html5.gif) no-repeat right top;"></div>
+		<div>当使用简写属性时，属性值的顺序为：</div>
+		<ul>
+			<li>background-color</li>
+			<li>background-image</li>
+			<li>background-repeat</li>
+			<li>background-attachment</li>
+			<li>background-position</li>
+		</ul>
+		<div class="ban-shi-title">
+			<div class="def-width">Property</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">background</div>
+			<div class="def-width">简写属性，作用是将背景属性设置在一个声明中。</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">background-attachm<br />ent</div>
+			<div class="def-width">背景图像是否固定或者随着页面的其余部分滚动</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">background-color</div>
+			<div class="def-width">设置元素的背景颜色</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">background-image</div>
+			<div class="def-width">把图像设置为背景</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">background-position</div>
+			<div class="def-width">设置背景图像的起始位置</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">background-repeat</div>
+			<div class="def-width">设置背景图像是否及如何重复</div>
+		</div>
+	</body>
+</html>

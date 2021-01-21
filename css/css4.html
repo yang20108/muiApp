@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<h3>id 和 class 选择器</h3>
+		<div>如果你要在HTML元素中设置CSS样式，你需要在元素中设置"id" 和 "class"选择器。</div>
+		<h3>id 选择器</h3>
+		<div>id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。</div>
+		<div>HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 <span class="def-bgc-tips">#</span> 来定义（id是唯一的，不能重复）</div>
+		<div class="text-yu-fa" style="margin-top: 3px;">
+			<b>#para</b> { // 这里id="para"<br />
+				text-align: center;<br />
+				color: red;<br />
+			}
+		</div>
+		<h3>class 选择器</h3>
+		<div>class 选择器用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用</div>
+		<div> 在 CSS 中，类选择器以一个点<span class="def-bgc-tips">.</span>号显示</div>
+		<div class="text-yu-fa" style="margin-top: 3px;">
+			// 这里class="center"<br />
+			<b>.center</b> { text-align:center; }<br /><br />
+			// 这里所有div元素使用 class="center"<br />
+			div<b>.center</b> { text-align:center; }
+		</div>
+	</body>
+</html>

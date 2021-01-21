@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<h3>如何插入样式表</h3>
+		<ul>
+			<li>外部样式表(External style sheet)</li>
+			<li>内部样式表(Internal style sheet)</li>
+			<li>内联样式(Inline style)</li>
+		</ul>
+		<h3>外部样式表</h3>
+		<div>当样式需要应用于很多页面时，外部样式表将是理想的选择</div>
+		<div class="text-yu-fa">
+			&lt;head&gt;<br />
+			&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br />
+			&lt;/head&gt;
+		</div>
+		<h3>内部样式表</h3>
+		<div>当单个文档需要特殊的样式时，就应该使用内部样式表。</div>
+		<div class="text-yu-fa">
+			&lt;head&gt;<br />
+			&lt;style&gt;<br />
+			text {color:sienna;}<br />
+			p {margin-left:20px;}<br />
+			&lt;/style&gt;<br />
+			&lt;/head&gt;
+		</div>
+		<h3>内联样式</h3>
+		<div>由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势</div>
+		<div class="text-yu-fa">
+			&lt;p style="color:sienna;margin-left:20px"&gt;这是一个段落。&lt;/p&gt;
+		</div>
+		<h3>多重样式优先级</h3>
+		<div>内联样式）Inline style &gt; （内部样式）Internal style sheet &gt;（外部样式）External style sheet &gt; 浏览器默认样式</div>
+	</body>
+</html>
