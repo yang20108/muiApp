@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<h3>表格边框</h3>
+		<div>指定CSS表格边框，使用border属性。</div>
+		<table border="1">
+			<tr>
+				<th>Firstname</th><th>Lastname</th>
+			</tr>
+			<tr>
+				<td>Peter</td><td>Griffin</td>
+			</tr>
+			<tr>
+				<td>Peter</td><td>Griffin</td>
+			</tr>
+		</table>
+		<div class="text-yu-fa" style="margin-top: 3px;">
+			table,th,td {<br />
+				border:1px solid black;<br />
+			}<br />
+		</div>
+		<div>请注意，在上面的例子中的表格有双边框。这是因为表和th/ td元素有独立的边界。</div>
+		<h3>折叠边框</h3>
+		<div>border-collapse 属性设置表格的边框是否被折叠成一个单一的边框或隔开：</div>
+		<table border="1" style="border-collapse: collapse;">
+			<tr>
+				<th>Firstname</th><th>Lastname</th>
+			</tr>
+			<tr>
+				<td>Peter</td><td>Griffin</td>
+			</tr>
+			<tr>
+				<td>Peter</td><td>Griffin</td>
+			</tr>
+		</table>
+		<div class="text-yu-fa" style="margin-top: 3px;">
+			table {<br />
+				border-collapse: collapse;<br />
+			}<br />
+		</div>
+		<h3>colspan跨列</h3>
+		<table border="1" style="border-collapse: collapse;">
+			<tr>
+				<th colspan="3">All Name</th>
+			</tr>
+			<tr>
+				<td>Griffin</td><td>Griffin</td><td>Griffin</td>
+			</tr>
+			<tr>
+				<td>Peter</td><td>Peter</td><td>Peter</td>
+			</tr>
+		</table>
+		<h3>rowspan跨行</h3>
+		<table border="1" style="border-collapse: collapse;">
+			<tr>
+				<th rowspan="4">All Name</th>
+			</tr>
+			<tr>
+				<td>Griffin</td><td>Peter</td>
+			</tr>
+			<tr>
+				<td>Griffin</td><td>Peter</td>
+			</tr>
+			<tr>
+				<td>Griffin</td><td>Peter</td>
+			</tr>
+		</table>
+		<div class="text-tips">
+			colspan和rowspan这两个属性用在td标签中，用来指定单元格横向跨越的列数
+		</div>
+	</body>
+</html>
