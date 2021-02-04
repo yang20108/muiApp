@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<div>margin(外边距)属性定义元素周围的空间。</div>
+		<h3>margin</h3>
+		<div>margin 清除周围的（外边框）元素区域。margin 没有背景颜色，是完全透明的。</div>
+		<div>margin 可以单独改变元素的上，下，左，右边距，也可以一次改变所有的属性。</div>
+		<div style="color: green;border: 1px solid #000000;text-align: center;padding: 3px;">
+			<div>margin-top</div>
+			<div style="display: flex;justify-content: space-between;align-items: center;">
+				<div>margin-left</div>
+				<div style="color: blue;border: 1px solid red;text-align: center;padding: 3px;width: 80%;">
+					<div>padding-top</div>
+					<div style="display: flex;justify-content: space-between;">
+						<div>padding-left</div>
+						<div style="border: 1px solid black;width: 40%;"></div>
+						<div>padding-right</div>
+					</div>
+					<div>padding-bottom</div>
+				</div>
+				<div>margin-right</div>
+			</div>
+			<div>margin-bottom</div>
+		</div>
+		<div style="margin: 10px 0px;"><b>可能的值</b></div>
+		<div class="ban-shi-title">
+			<div class="def-width">值</div>
+			<div class="def-width">说明</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">auto</div>
+			<div class="def-width">设置浏览器边距。<br />这样做的结果会依赖于浏览器</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">length</div>
+			<div class="def-width">定义一个固定的margin（使用像素，pt，em等）</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">%</div>
+			<div class="def-width">定义一个使用百分比的边距</div>
+		</div>
+		<h3>Margin - 简写属性</h3>
+		<div>margin属性可以有一到四个值。</div>
+		<ul>
+			<li>
+				<b>margin: 25px 50px 75px 100px;</b>
+				<ul type="square">
+					<li>上边距为25px</li>
+					<li>右边距为50px</li>
+					<li>下边距为75px</li>
+					<li>左边距为100px</li>
+				</ul>
+			</li>
+			<li>
+				<b>margin: 25px 50px 75px;</b>
+				<ul type="square">
+					<li>上边距为25px</li>
+					<li>左右边距为50px</li>
+					<li>下边距为75px</li>
+				</ul>
+			</li>
+			<li>
+				<b>margin: 25px 50px;</b>
+				<ul type="square">
+					<li>上下边距为25px</li>
+					<li>左右边距为50px</li>
+				</ul>
+			</li>
+			<li>
+				<b>margin: 25px;</b>
+				<ul type="square">
+					<li>所有的4个边距都是25px</li>
+				</ul>
+			</li>
+		</ul>
+		<h3>所有的CSS边距属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">margin</div>
+			<div class="def-width">简写属性。在一个声明中设置所有外边距属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">margin-bottom</div>
+			<div class="def-width">设置元素的下外边距</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">margin-left</div>
+			<div class="def-width">设置元素的左外边距</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">margin-right</div>
+			<div class="def-width">设置元素的右外边距</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">margin-top</div>
+			<div class="def-width">设置元素的上外边距</div>
+		</div>
+	</body>
+</html>
