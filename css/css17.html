@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<div>为了尽量减少样式表中有很多具有相同样式的元素代码，你可以使用分组选择器。每个选择器用逗号分隔。</div>
+		<div class="text-yu-fa">
+			h1, h2, p {<br />
+				color: green;<br />
+			}
+		</div>
+		<h3>嵌套选择器</h3>
+		<div>它可能适用于选择器内部的选择器的样式。</div>
+		<div>下面的例子设置了三个样式：</div>
+		<div class="text-yu-fa">
+			p {<br />
+				color: blue;<br />
+				text-align: center; <br />
+			}
+		</div>
+		<div>讲解：<span class="def-bgc-tips">p { }</span>为所有p元素指定一个样式。</div>
+		<div class="text-yu-fa">
+			.marked {<br />
+				background-color: red;<br />
+			}
+		</div>
+		<div>讲解：<span class="def-bgc-tips">.marked { }</span>为所有class="marked"的元素指定一个样式。</div>
+		<div class="text-yu-fa">
+			.marked p {<br />
+				color: white;<br />
+			}
+		</div>
+		<div>讲解：<span class="def-bgc-tips">.marked p { }</span>为所有class="marked"元素内的p元素指定一个样式。</div>
+		<div class="text-yu-fa">
+			p.marked {<br />
+				text-decoration: underline;<br />
+			}
+		</div>
+		<div>讲解：<span class="def-bgc-tips">p.marked { }</span>为所有class="marked"的p元素指定一个样式。</div>
+	</body>
+</html>
