@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<div>display属性设置一个元素应如何显示</div>
+		<div>visibility属性指定一个元素应可见还是隐藏</div>
+		<h3>隐藏元素</h3>
+		<ul>
+			<li>display:none</li>
+			<li>visibility:hidden</li>
+		</ul>
+		<div>visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局</div>
+		<div style="border: 1px solid #000000;display: flex;">
+			<div>
+				<div>这是一个可见标题</div>
+				<div style="visibility: hidden;">这是一个隐藏标题</div>
+			</div>
+			<div>
+				<div style="visibility: hidden;">这是说明</div>
+				<div style="display: flex;">
+					<div style="margin-top: 10px;" class="jian-tou-left"></div>
+					<div>这是一个隐藏标题</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-tips">注意:实例中的隐藏标题仍然占用空间</div>
+		<div style="height: 5px;"></div>
+		<div>display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。
+		也就是说，该元素不但被隐藏了，而且该元素原本占用的空间也会从页面布局中消失。</div>
+		<div style="border: 1px solid #000000;display: flex;">
+			<div>这是一个可见标题</div>
+			<div style="display: none;">这是一个隐藏标题</div>
+		</div>
+		<div class="text-tips">注意:实例中的隐藏标题不占用空间</div>
+		<h3>Display - 块和内联元素</h3>
+		<div>块元素是一个元素，占用了全部宽度，在前后都是换行符。</div>
+		<div>比如：&lt;h1&gt;、&lt;p&gt;、&lt;div&gt;</div>
+		<div style="height: 5px;"></div>
+		<div>内联元素只需要必要的宽度，不强制换行。</div>
+		<div>比如：&lt;span&gt;、&lt;a&gt;</div>
+	</body>
+</html>

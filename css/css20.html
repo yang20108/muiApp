@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			.pos-fixed {
+				position: fixed;top: 10px;right: 10px;color: #FFFFFF;background-color: #eec017;
+				padding: 1px 3px;
+				border-radius: 5px;
+			}
+			.pos-abs {
+				position: absolute;bottom: 2px;right: 2px;color: #FFFFFF;background-color: #0EAFFE;
+				padding: 1px 3px;
+				border-radius: 5px;
+			}
+			.pos-sti-list {
+				border: 1px solid #000000;width: 100%;height: 300px;position: relative;
+				overflow: scroll;
+			}
+			.pos-sti {
+				width: 60%;
+				position: sticky;top: 0px;color: #FFFFFF;background-color: #eec017;
+				padding: 1px 3px;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>position 属性指定了元素的定位类型</div>
+		<ul>
+			<li>static</li>
+			<li>relative</li>
+			<li>fixed</li>
+			<li>absolute</li>
+			<li>sticky</li>
+		</ul>
+		<div>元素可以使用的顶部，底部，左侧和右侧属性定位。然而，这些属性无法工作，除非是先设定position属性。
+		他们也有不同的工作方式，这取决于定位方法</div>
+		<h3>static 定位</h3>
+		<div>静态定位的元素不会受到 top, bottom, left, right影响</div>
+		<div style="border: 1px solid #000000;width: 100%;height: 100px;position: static;">
+			该元素使用了 position: static;
+		</div>
+		<h3>relative 定位</h3>
+		<div>相对定位元素的定位是相对其正常位置, 会受到 top, bottom, left, right影响</div>
+		<div style="border: 1px solid #000000;width: 100%;height: 100px;">
+			<div style="position: relative;">该元素使用了 position: relative;</div>
+			<div style="position: relative;left: 20px;">该元素使用了 position: relative; 并配合left使用</div>
+			<div style="position: relative;right: 20px;">该元素使用了 position: relative; 并配合right使用</div>
+		</div>
+		<h3>fixed 定位</h3>
+		<div>元素的位置相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动
+		, 会受到 top, bottom, left, right影响</div>
+		<div class="pos-fixed">fixed 顶部右侧定位</div>
+		<div>fixed 该元素在顶部右侧定位</div>
+		<h3>absolute 定位</h3>
+		<div>绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lt;html&gt;
+		, 会受到 top, bottom, left, right影响</div>
+		<div style="border: 1px solid #000000;width: 100%;height: 100px;position: relative;">
+			该元素使用了 position: absolute;<br />
+			定位在父元素的右下角位置
+			<div class="pos-abs">absolute 底部右侧定位</div>
+		</div>
+		<h3>sticky 定位</h3>
+		<div>sticky 英文字面意思是粘，粘贴，所以可以把它称之为粘性定位。</div>
+		<div><span class="def-bgc-tips">position: sticky;</span>基于用户的滚动位置来定位。</div>
+		<div style="height: 5px;"></div>
+		<div class="pos-sti-list">
+			<div>尝试滚动列表</div>
+			<div>尝试滚动列表</div>
+			<div>注意: IE/Edge 15 及更早 IE 版本不支持 sticky 属性</div>
+			<div>滚动001列表</div>
+			<div class="pos-sti">我是sticky粘性定位!</div>
+			<div>滚动002列表</div>
+			<div>来！滚动列表</div>
+			<div>滚动003列表</div>
+			<div>滚动004列表</div>
+			<div>滚动005列表</div>
+			<div>滚动我</div>
+			<div>滚动起来</div>
+			<div>滚动006列表</div>
+			<div>滚动007列表</div>
+			<div>滚动起来</div>
+			<div>滚动起来</div>
+			<div>来回滚动</div>
+			<div>来回滚动</div>
+			<div>滚动008列表</div>
+			<div>滚动009列表</div>
+			<div>滚动010列表</div>
+		</div>
+	</body>
+</html>
