@@ -1,3 +1,41 @@
+.jian-tou-right {
+	width: 30px;
+	height: 2px;
+	background-color: #000000;
+	position: relative;
+}
+.jian-tou-right::before {
+	content: " ";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	right: -1px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-top: 5px solid transparent;
+	border-left: 10px solid #000000;
+	border-bottom: 5px solid transparent;
+}
+.jian-tou-left {
+	width: 30px;
+	height: 2px;
+	background-color: #000000;
+	position: relative;
+}
+.jian-tou-left::before {
+	content: " ";
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: -1px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-top: 5px solid transparent;
+	border-right: 10px solid #000000;
+	border-bottom: 5px solid transparent;
+}
 .xuan-box2 {
 	text-align: center;
 	padding: 5px 2px;
