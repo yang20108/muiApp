@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			.img-float {
+				width: 70px;
+				height: 70px;
+				margin: 5px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div>CSS 的 Float（浮动），会使元素向左或向右移动，其周围的元素也会重新排列。</div>
+		<h3>元素怎样浮动</h3>
+		<div>元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。</div>
+		<div style="border: 1px solid #000000;">
+			<p>在下面的段落中，我们添加了一个 <b>float:right</b> 的图片。导致图片将会浮动在段落的右边。</p>
+			<p>
+				<img style="float: right;" width="80" height="80" src="../img/html5.gif" >
+				一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。
+				浮动元素之后的元素将围绕它。
+				浮动元素之前的元素将不会受到影响。
+				如果图像是右浮动，而文本流将环绕在它左边。
+			</p>
+		</div>
+		<h3>彼此相邻的浮动元素</h3>
+		<div>如果你把几个浮动的元素放到一起，如果有空间的话，它们将彼此相邻</div>
+		<div id="kongjian" style="border: 1px solid #000000;">
+			<img class="img-float" src="../img/html5.gif" />
+			<img class="img-float" src="../img/html5.gif" />
+			<img class="img-float" src="../img/html5.gif" />
+			<img class="img-float" src="../img/html5.gif" />
+			<img class="img-float" src="../img/html5.gif" />
+			<img class="img-float" src="../img/html5.gif" />
+			<div style="clear: both;"></div>
+		</div>
+		<div style="height: 5px;"></div>
+		<button class="btn-one" type="button" onclick="changeKong()">改变空间大小</button>
+		<script type="text/javascript">
+			var number = 0;
+			function changeKong() {
+				number++;
+				if (number % 2 === 0) {
+					document.getElementById("kongjian").style.width = "100%";
+				} else {
+					document.getElementById("kongjian").style.width = "80%";
+				}
+				if (number >= 100) { number = 0; }
+			}
+		</script>
+		<h3>清除浮动 - 使用 clear</h3>
+		<div>元素浮动之后，周围的元素会重新排列，为了避免这种情况，使用 clear 属性。</div>
+		<div>clear 属性指定元素两侧不能出现浮动元素。</div>
+		<div class="text-yu-fa">
+			.qing-chu { <br />
+				 clear: both;<br />
+			}
+		</div>
+	</body>
+</html>
