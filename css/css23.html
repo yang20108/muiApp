@@ -8,5 +8,146 @@
 	</head>
 	<body>
 		<h3>元素居中对齐</h3>
+		<div>要水平居中对齐一个元素(如 &lt;div&gt;), 可以使用<span class="def-bgc-tips">margin: auto;</span>。</div>
+		<div>设置到元素的宽度将防止它溢出到容器的边缘</div>
+		<div>元素通过指定宽度，并将两边的空外边距平均分配：</div>
+		<div style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;">div 元素是居中的</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.center {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;margin: auto;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;width: 50%;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br />
+			}
+		</div>
+		<div class="text-tips">
+			注意: 如果没有设置 width 属性(或者设置 100%)，居中对齐将不起作用。
+		</div>
+		<h3>文本居中对齐</h3>
+		<div>如果仅仅是为了文本在元素内居中对齐，可以使用 <span class="def-bgc-tips">text-align: center;</span></div>
+		<div style="height: 10px;"></div>
+		<div style="border: 3px solid green;text-align: center;">div 元素是居中的</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.center {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+			}
+		</div>
+		<h3>图片居中对齐</h3>
+		<div>要让图片居中对齐, 可以使用 <span class="def-bgc-tips">margin: auto;</span> 并将它放到 <b>块</b> 元素中:</div>
+		<div style="height: 10px;"></div>
+		<img style="display: block;margin: auto;width: 100px;border: 3px solid green;" src="../img/html5.gif" >
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.img {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;display: block;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;margin: auto;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;width: 100px;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+			}
+		</div>
+		<h3>左右对齐 - 使用定位方式</h3>
+		<div>我们可以使用 <span class="def-bgc-tips">position: absolute;</span> 属性来对齐元素:</div>
+		<div style="height: 10px;"></div>
+		<div style="position: relative;height: 50px;">
+		<div style="position: absolute;right: 0;width: 300px;border: 3px solid green;padding: 10px;">思念你的兔儿</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.right {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;right: 0px;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid #73AD21;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br />
+			}
+		</div>
+		<div style="height: 10px;"></div>
+		<div>提示: 当使用 <span class="def-bgc-tips">position</span> 来对齐元素时,
+		 通常 &lt;body&gt; 元素会设置 <span class="def-bgc-tips">margin: 0</span> 和 <span class="def-bgc-tips">padding: 0</span> </div>
+		<h3>左右对齐 - 使用 float 方式</h3>
+		<div>我们也可以使用 <span class="def-bgc-tips">float</span> 属性来对齐元素</div>
+		<div class="text-yu-fa">
+			.float {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;float: right;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid #73AD21;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br />
+			}
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-tips">
+			注意：如果子元素的高度大于父元素，且子元素设置了浮动，那么子元素将溢出，这时候你可以使用 "clearfix(清除浮动)" 来解决该问题。
+		</div>
+		<div class="text-yu-fa">
+			.clearfix { <br />
+				&nbsp;&nbsp;&nbsp;&nbsp;overflow: auto; <br />
+			} <br >
+		</div>
+		<h3>垂直居中对齐 - 使用 padding</h3>
+		<div>一个简单的垂直居中对齐方式就是头部顶部使用 <span class="def-bgc-tips">padding</span>:</div>
+		<div style="height: 10px;"></div>
+		<div style="padding: 30px 0;border: 3px solid green;">我是垂直居中</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.center {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;padding: 30px 0;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+			}
+		</div>
+		<div>如果要水平和垂直都居中，可以使用 <span class="def-bgc-tips">padding</span> 和 
+		<span class="def-bgc-tips">text-align: center</span>:</div>
+		<div style="height: 10px;"></div>
+		<div style="padding: 30px 0;border: 3px solid green;text-align: center;">我是水平和垂直都居中的</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.center {<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;padding: 30px 0;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+			}
+		</div>
+		<h3>垂直居中 - 使用 line-height</h3>
+		<div style="line-height: 100px;height: 100px;border: 3px solid green;text-align: center;">
+			我是垂直居中的
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.center {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;line-height: 200px;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br />
+			}<br />
+			/* 如果文本有多行，添加以下代码: */<br />
+			.center p {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;line-height: 1.5;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;vertical-align: middle;<br />
+			}
+		</div>
+		<h3>垂直居中 - 使用 position 和 transform</h3>
+		<div>还可以使用 <span class="def-bgc-tips">transform</span> 属性来设置垂直居中</div>
+		<div style="height: 10px;"></div>
+		<div style="height: 100px;position: relative;border: 3px solid green;">
+			<p style="margin: 0;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">我是垂直居中的</p>
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			.center {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;border: 3px solid green;<br />
+			}<br />
+			.center p {<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;top: 50%;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;left: 50%;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;transform: translate(-50%, -50%);<br />
+			}
+		</div>
 	</body>
 </html>
