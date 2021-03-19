@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			ul {
+				list-style-type: none; /* 移除列表前小标志 */
+				margin: 0;
+				padding: 0;
+				width: 200px;
+				background-color: #f1f1f1;
+			}
+			li a {
+				display:block; /* 显示块元素的链接，让整体变为可点击链接区域（不只是文本） */
+				color: #000000;
+				padding: 8px 16px;
+				text-decoration: none;
+				border-bottom: 1px solid #FFFFFF;
+			}
+			li a:hover {
+				/* background-color: #555;
+				color: white; */
+			}
+		</style>
+	</head>
+	<body>
+		<h3>导航栏 - 垂直</h3>
+		<ul>
+			<li><a href="#">主页</a></li>
+			<li><a href="#">联系</a></li>
+			<li><a href="#">关于</a></li>
+			<li><a href="#">我的</a></li>
+		</ul>
+		<div style="height: 15px;"></div>
+		<div>导航条基本上是一个链接列表，所以使用 &lt;ul&gt; 和 &lt;li&gt;元素非常有意义：</div>
+		<div class="text-yu-fa">
+			&lt;ul&gt;<br />
+			&lt;li&gt;&lt;a href="#"&gt;主页&lt;/a&gt;&lt;/li&gt;<br />
+			&lt;li&gt;&lt;a href="#"&gt;联系&lt;/a&gt;&lt;/li&gt;<br />
+			&lt;li&gt;&lt;a href="#"&gt;关于&lt;/a&gt;&lt;/li&gt;<br />
+			&lt;li&gt;&lt;a href="#"&gt;我的&lt;/a&gt;&lt;/li&gt;<br />
+			&lt;/ul&gt;<br />
+		</div>
+		<div>现在，让我们从列表中删除边距和填充：</div>
+		<div class="text-yu-fa">
+			ul {<br />
+				list-style-type: none;<br />
+				margin: 0;<br />
+				padding: 0;<br />
+				width: 200px;<br />
+				background-color: #f1f1f1;<br />
+			}<br />
+		</div>
+		<div>垂直导航栏:</div>
+		<div class="text-yu-fa">
+			li a {<br />
+				display:block;<br />
+				color: #000000;<br />
+				padding: 8px 16px;<br />
+				text-decoration: none;<br />
+			}<br />
+		</div>
+		<div>在鼠标移动到选项时，修改背景颜色：</div>
+		<div class="text-yu-fa">
+			li a:hover {<br />
+				background-color: #555;<br />
+				color: white;<br />
+			}
+		</div>
+	</body>
+</html>

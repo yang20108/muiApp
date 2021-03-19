@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			.tool-tip {
+				position: relative;
+				display: inline-block;
+				border-bottom: 1px dotted #000000;
+			}
+			.tool-tip .tip-text {
+				visibility: hidden;
+				width: 120px;
+				background-color: #000000;
+				color: #FFFFFF;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+			}
+			.tool-tip:hover .tip-text {
+				visibility: visible;
+				opacity: 1;
+			}
+			.tip-right {
+				/* 右定位 */
+				position: absolute;
+				z-index: 1;
+				top: -5px;
+				left: 105%;
+			}
+			.tip-left {
+				/* 左定位 */
+				position: absolute;
+				z-index: 1;
+				top: -5px;
+				right: 105%;
+			}
+			.tip-top {
+				/* 头部定位 */
+				position: absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.tip-bottom {
+				/* 底部定位 */
+				position: absolute;
+				z-index: 1;
+				top: 100%;
+				left: 50%;
+				margin-left: -60px;
+			}
+			.tip-right-jiantou::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 100%;
+				margin-top: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent #000000 transparent transparent;
+			}
+			.tip-left-jiantou::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 100%;
+				margin-top: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent transparent #000000;
+			}
+			.tip-top-jiantou::after {
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-bottom: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #000000 transparent transparent transparent;
+			}
+			.tip-bottom-jiantou::after {
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -5px;
+				border-width: 5px;
+				border-style: solid;
+				border-color: transparent transparent #000000 transparent;
+			}
+			.opacity-inout {
+				/* 淡入 - 2秒内从 0% 到 100% 显示: */
+				opacity: 0;
+				transition: opacity 2s;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>右侧提示工具</h3>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-right">提示文本</span>
+		</div>
+		<h3>左侧提示工具</h3>
+		<div style="float: right;" class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-left">提示文本</span>
+		</div>
+		<div style="clear: both;"></div>
+		<h3>头部提示工具</h3>
+		<div style="height: 20px;"></div>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-top">提示文本</span>
+		</div>
+		<h3>底部提示工具</h3>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-bottom">提示文本</span>
+		</div>
+		<h3>右侧提示工具/左侧箭头</h3>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-right tip-right-jiantou">提示文本</span>
+		</div>
+		<h3>左侧提示工具/右侧箭头</h3>
+		<div style="float: right;" class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-left tip-left-jiantou">提示文本</span>
+		</div>
+		<div style="clear: both;"></div>
+		<h3>头部提示工具/底部箭头</h3>
+		<div style="height: 30px;"></div>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-top tip-top-jiantou">提示文本</span>
+		</div>
+		<h3>底部提示工具/头部箭头</h3>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-bottom tip-bottom-jiantou">提示文本</span>
+		</div>
+		<div style="height: 30px;"></div>
+		<h3>淡入效果</h3>
+		<div>可以使用 CSS3 transition 属性及 opacity 属性来实现提示工具的淡入效果:</div>
+		<div style="height: 10px;"></div>
+		<div class="tool-tip">鼠标移动到我这
+		  <span class="tip-text tip-right opacity-inout">提示文本</span>
+		</div>
+	</body>
+</html>
