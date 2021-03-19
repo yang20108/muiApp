@@ -5,6 +5,17 @@
 		<meta charset="utf-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			a:link { color: #FF0000; }
+			a:visited { color: #00FF00; }
+			a:hover { color: #FF00FF; }
+			a:active { color: #0000FF; }
+			.first-list:first-child {color: #007AFF;}
+			.first-list:last-child {color: #48da6a;}
+			q:lang(name) {
+				quotes: "^" "^";
+			}
+		</style>
 	</head>
 	<body>
 		<p>CSS伪类是用来添加一些选择器的特殊效果。</p>
@@ -15,6 +26,207 @@
 		<div>CSS类也可以使用伪类：</div>
 		<div class="text-yu-fa">
 			selector.class:pseudo-class {property:value;}
+		</div>
+		<h3>anchor伪类</h3>
+		<div>在支持 CSS 的浏览器中，链接的不同状态都可以以不同的方式显示</div>
+		<a href="#">未访问的链接</a>
+		<div class="text-tips">
+			Tips: 需要严格按顺序才能看到效果
+		</div>
+		<h3>:first-child 伪类</h3>
+		<div>您可以使用 :first-child 伪类来选择父元素的第一个、最后一个子元素</div>
+		<div style="border: 1px solid #000000;">
+			<div class="first-list">列表一</div>
+			<div class="first-list">列表二</div>
+			<div class="first-list">列表三</div>
+		</div>
+		<h3>:lang 伪类</h3>
+		<div>:lang 伪类使你有能力为不同的语言定义特殊的规则</div>
+		<div style="border: 1px solid #000000;">
+		<p>在这个例子中, :lang 类为属性值为 no 的q元素定义引号的类型：
+		 <q lang="name">这里是q元素里面的内容</q>
+		 :lang定义了q元素的值为lang =“no”</p>
+		</div>
+		<h3>所有CSS伪类/元素</h3>
+		<div class="ban-shi-title">
+			<div class="def-width2">选择器</div>
+			<div class="def-width2">示例</div>
+			<div class="def-width2">示例说明</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:checked</div>
+			<div class="def-width2">input:checked</div>
+			<div class="def-width2">选择所有选中的表单元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:disabled</div>
+			<div class="def-width2">input:disabled</div>
+			<div class="def-width2">选择所有禁用的表单元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:empty</div>
+			<div class="def-width2">p:empty</div>
+			<div class="def-width2">选择所有没有子元素的p元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:enabled</div>
+			<div class="def-width2">input:enabled</div>
+			<div class="def-width2">选择所有启用的表单元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:first-of-type</div>
+			<div class="def-width2">p:first-of-type</div>
+			<div class="def-width2">选择的每个 p 元素是其父元素的第一个 p 元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:in-range</div>
+			<div class="def-width2">input:in-range</div>
+			<div class="def-width2">选择元素指定范围内的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:invalid</div>
+			<div class="def-width2">input:invalid</div>
+			<div class="def-width2">选择所有无效的元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:last-child</div>
+			<div class="def-width2">p:last-child</div>
+			<div class="def-width2">选择所有p元素的最后一个子元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:last-of-type</div>
+			<div class="def-width2">p:last-of-type</div>
+			<div class="def-width2">选择每个p元素是其母元素的最后一个p元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:not(selector)</div>
+			<div class="def-width2">:not(p)</div>
+			<div class="def-width2">选择所有p以外的元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:nth-child(n)</div>
+			<div class="def-width2">p:nth-child(2)</div>
+			<div class="def-width2">选择所有 p 元素的父元素的第二个子元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:nth-last-child(n)</div>
+			<div class="def-width2">p:nth-last-child(2)</div>
+			<div class="def-width2">选择所有p元素倒数的第二个子元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:nth-last-of-type(n)</div>
+			<div class="def-width2">p:nth-last-of-type(2)</div>
+			<div class="def-width2">选择所有p元素倒数的第二个为p的子元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:nth-of-type(n)</div>
+			<div class="def-width2">p:nth-of-type(2)</div>
+			<div class="def-width2">选择所有p元素第二个为p的子元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:only-of-type</div>
+			<div class="def-width2">p:only-of-type</div>
+			<div class="def-width2">选择所有仅有一个子元素为p的元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:only-child</div>
+			<div class="def-width2">p:only-child</div>
+			<div class="def-width2">选择所有仅有一个子元素的p元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:optional</div>
+			<div class="def-width2">input:optional</div>
+			<div class="def-width2">选择没有"required"的元素属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:out-of-range</div>
+			<div class="def-width2">input:out-of-range</div>
+			<div class="def-width2">选择指定范围以外的值的元素属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:read-only</div>
+			<div class="def-width2">input:read-only</div>
+			<div class="def-width2">选择只读属性的元素属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:read-write</div>
+			<div class="def-width2">input:read-write</div>
+			<div class="def-width2">选择没有只读属性的元素属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:required</div>
+			<div class="def-width2">input:required</div>
+			<div class="def-width2">选择有"required"属性指定的元素属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:root</div>
+			<div class="def-width2">root</div>
+			<div class="def-width2">选择文档的根元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:target</div>
+			<div class="def-width2">#news:target</div>
+			<div class="def-width2">选择当前活动#news元素(点击URL包含锚的名字)</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:valid</div>
+			<div class="def-width2">input:valid</div>
+			<div class="def-width2">选择所有有效值的属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:link</div>
+			<div class="def-width2">a:link</div>
+			<div class="def-width2">选择所有未访问链接</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:visited</div>
+			<div class="def-width2">a:visited</div>
+			<div class="def-width2">选择所有访问过的链接</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:active</div>
+			<div class="def-width2">a:active</div>
+			<div class="def-width2">选择正在活动链接</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:hover</div>
+			<div class="def-width2">a:hover</div>
+			<div class="def-width2">把鼠标放在链接上的状态</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:focus</div>
+			<div class="def-width2">input:focus</div>
+			<div class="def-width2">选择元素输入后具有焦点</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:first-letter</div>
+			<div class="def-width2">p:first-letter</div>
+			<div class="def-width2">选择每个p 元素的第一个字母</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:first-line</div>
+			<div class="def-width2">p:first-line</div>
+			<div class="def-width2">选择每个p 元素的第一行</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:first-child</div>
+			<div class="def-width2">p:first-child</div>
+			<div class="def-width2">选择器匹配属于任意元素的第一个子元素的 p 元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:before</div>
+			<div class="def-width2">p:before</div>
+			<div class="def-width2">在每个p元素之前插入内容</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:after</div>
+			<div class="def-width2">p:after</div>
+			<div class="def-width2">在每个p元素之后插入内容</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">:lang(langua ge)</div>
+			<div class="def-width2">p:lang(it)</div>
+			<div class="def-width2">为p元素的lang属性选择一个开始值</div>
 		</div>
 	</body>
 </html>
