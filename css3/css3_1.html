@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>教程</h3>
+		<div>CSS 用于控制网页的样式和布局。</div>
+		<div>CSS3 是最新的 CSS 标准。</div>
+		<div class="css3-jiao">
+			<div class="yuan-jiao" style="width: 50px;height: 30px;background-color: rgb(146,185,1);transform: rotate(30deg);">css3<br /> Rotate</div>
+			<div style="width: 20px;"></div>
+			<div class="yuan-jiao" style="width: 100px;height: 60px;background-color: rgb(249,132,80);">css3<br /> Scale</div>
+			<div style="width: 20px;"></div>
+			<div class="yuan-jiao" style="width: 50px;height: 30px;background-color: rgb(32,199,229);transform: rotate(120deg);">css3<br /> Skew</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			div {<br />
+				transform:rotate(30deg);<br />
+			}
+		</div>
+		<h3>简介</h3>
+		<div>一些最重要CSS3模块如下：</div>
+		<ul>
+			<li>选择器</li>
+			<li>盒模型</li>
+			<li>背景和边框</li>
+			<li>文字特效</li>
+			<li>2D/3D转换</li>
+			<li>动画</li>
+			<li>多列布局</li>
+			<li>用户界面</li>
+		</ul>
+	</body>
+	<style type="text/css">
+		.css3-jiao {
+			height: 150px;
+			display: flex;flex-direction: row;border: 1px solid #000000;
+			padding: 30px;box-sizing: border-box;
+		}
+		.yuan-jiao {
+			padding: 10px;
+			color: #FFFFFF;
+			text-align: center;
+			border-radius: 5px;
+			border: 1px solid rgb(134,138,138);
+		}
+	</style>
+</html>

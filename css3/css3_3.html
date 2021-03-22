@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<div style="width: 100%;border: 2px solid rgb(138,192,7);border-radius: 10px;padding: 0 10px;box-sizing: border-box;">
+			<h3>CSS3 圆角</h3>
+			<p>使用 CSS3 border-radius 属性，你可以给任何元素制作 "圆角"。</p>
+		</div>
+		<div style="display: flex;">
+			<div class="bor-item" style="border-top-left-radius: 20px;">左上圆角</div>
+			<div style="width: 10px;"></div>
+			<div class="bor-item" style="border-top-right-radius: 20px;">右上圆角</div>
+		</div>
+		<div style="display: flex;">
+			<div class="bor-item" style="border-bottom-left-radius: 20px;">左下圆角</div>
+			<div style="width: 10px;"></div>
+			<div class="bor-item" style="border-bottom-right-radius: 20px;">右下圆角</div>
+		</div>
+		<div class="bor-item" style="border-radius: 5px 10px 15px 20px;width: 80%;">
+			border-radius: 5px 10px 15px 20px;<br /> (顺序：左上，右上，右下，左下)</div>
+		<div class="bor-item" style="border-radius: 15px 50px 30px;">右下圆角 <br />border-radius: 15px 50px 30px</div>
+		<div class="bor-item" style="border-radius: 15px 50px;">右下圆角 <br />border-radius: 15px 50px</div>
+		<div style="height: 10px;"></div>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-radius</div>
+			<div class="def-width">所有四个边角 border-*-*-radius 属性的缩写</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-top-left-radius</div>
+			<div class="def-width">定义了左上角的弧度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-top-right-radius</div>
+			<div class="def-width">定义了右上角的弧度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-bottom-right-radius</div>
+			<div class="def-width">定义了右下角的弧度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-bottom-left-radius</div>
+			<div class="def-width">定义了左下角的弧度</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.bor-item {
+			padding: 30px;
+			color: #FFFFFF;
+			margin-top: 10px;
+			width: 100px;
+			height: 50px;
+			background-color: rgb(138,192,7);
+		}
+	</style>
+</html>

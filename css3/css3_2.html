@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	</head>
+	<body>
+		<div>用 CSS3，你可以创建圆角边框，添加阴影框，并作为边界的形象而不使用设计程序</div>
+		<h3>border-radius 圆角</h3>
+		<div class="bor-rad">border-radius 属性允许您为元素添加圆角边框！ </div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			div {<br />
+			 border:2px solid;<br />
+			 border-radius:25px;<br />
+			}
+		</div>
+		<h3>box-shadow盒阴影</h3>
+		<div>box-shadow 属性被用来添加阴影:</div>
+		<div class="box-sha"></div>
+		<div style="height: 20px;"></div>
+		<div class="text-yu-fa">
+			div {<br />
+				box-shadow: 10px 10px 5px #888888;<br />
+			}
+		</div>
+		<h3>border-image边界图片</h3>
+		<div>border-image 属性允许你指定一个图片作为边框！</div>
+		<div class="bor-img" style="border-image:url(../img/html5.gif) 30 30 round;">
+			这里，图像平铺（重复）来填充该区域。
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			border-image:url(border.png) 30 30 round;<br />
+			-webkit-border-image:url(border.png) 30 30 round; /* Safari 5 and older */<br />
+			-o-border-image:url(border.png) 30 30 round; /* Opera */<br />
+		</div>
+		<h3>新边框属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">css3属性</div>
+			<div class="def-width">说明</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-image</div>
+			<div class="def-width">设置所有边框图像的速记属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">border-radius</div>
+			<div class="def-width">一个用于设置所有四个边框- *-半径属性的速记属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">box-shadow</div>
+			<div class="def-width">附加一个或多个下拉框的阴影</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.bor-img {
+			border:15px solid transparent;
+			width:250px;
+			padding:10px 20px;
+		}
+		.bor-rad {
+			border: 2px solid #a1a1a1;
+			padding: 10px 40px;
+			background: #dddddd;
+			width: 200px;
+			border-radius: 25px;
+		}
+		.box-sha {
+			width:200px;
+			height:100px;
+			background-color:yellow;
+			box-shadow: 10px 10px 5px #888888;
+		}
+	</style>
+</html>
