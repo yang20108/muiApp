@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<body>
+		<h3>创建一个透明图像</h3>
+		<div>CSS3中属性的透明度是 opacity</div>
+		<div style="display: flex;flex-direction: row;padding: 10px;box-sizing: border-box;">
+			<div>
+				<div style="text-align: center;margin-bottom: 10px;">正常图片</div>
+				<img src="../img/html5.gif" />
+			</div>
+			<div>
+				<div style="text-align: center;margin-bottom: 10px;">带有透明度0.4</div>
+				<img style="opacity: 0.4;filter: alpha(opacity=40);" src="../img/html5.gif" />
+			</div>
+		</div>
+		<div class="text-tips">
+			透明度属性可以将图像变的不透明。 Opacity属性值从0.0 - 1.0。值越小，使得元素更加透明。<br />
+		</div>
+		<div>IE8和早期版本使用滤镜：alpha（opacity= x）。 x可以采取的值是从0 - 100。较低的值，使得元素更加透明。</div>
+	</body>
+</html>

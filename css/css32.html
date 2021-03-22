@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+	</head>
+	<style type="text/css">
+		body {
+			counter-reset: section;
+		}
+		h3::before {
+			counter-increment: section;
+			content: "Section" counter(section) ": ";
+		}
+	</style>
+	<body>
+		<h3>使用计数器自动编号</h3>
+		<div>CSS 计数器根据规则来递增变量，使用到以下几个属性:</div>
+		<ul>
+			<li>counter-reset - 创建或者重置计数器</li>
+			<li>counter-increment - 递增变量</li>
+			<li>content - 插入生成的内容</li>
+			<li>counter() 或 counters() 函数 - 将计数器的值添加到元素</li>
+		</ul>
+		<h2>使用 CSS 计数器:</h2>
+		<h3>HTML 教程</h3>
+		<h3>CSS 教程</h3>
+		<h3>JavaScript 教程</h3>
+		<h4>CSS 计数器属性</h4>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">content</div>
+			<div class="def-width">使用 ::before 和 ::after 伪元素来插入自动生成的内容</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">counter-increment</div>
+			<div class="def-width">递增一个或多个值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">counter-reset</div>
+			<div class="def-width">创建或重置一个或多个计数器</div>
+		</div>
+	</body>
+</html>

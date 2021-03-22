@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="public.css"/>
+		<style type="text/css">
+			[title] {
+				color: blue;
+			}
+			[title=value] {
+				border: 2px solid salmon;
+			}
+			[title~=hello] {
+				color: skyblue;
+			}
+			[lang|=en]
+			{
+				color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<p>具有特定属性的HTML元素样式不仅仅是class和id 。</p>
+		<h3>属性选择器</h3>
+		<div class="text-yu-fa">
+			[title] {<br />
+				color: blue;<br />
+			}<br />
+		</div>
+		<h2 title="h2">&lt;h2 title="h2"&gt;&lt;/h2&gt;</h2>
+		<h3>属性和值选择器</h3>
+		<div class="text-yu-fa">
+			[title=value] {<br />
+				border: 2px solid salmon;<br />
+			}<br />
+		</div>
+		<div style="height: 10px;"></div>
+		<div title="value">&lt;div title="value"&gt;title="value"&lt;/div&gt;</div>
+		<div title="val">&lt;div title="val"&gt;title="val"&lt;/div&gt;</div>
+		<h3>属性和值的选择器 - 多值</h3>
+		<div class="text-yu-fa">
+			[title~=hello] {<br />
+				color: seashell;<br />
+			}<br />
+		</div>
+		<div style="height: 10px;"></div>
+		<div title="ting hello">&lt;div title="ting hello"&gt;title="ting hello"&lt;/div&gt;</div>
+		<div title="hello world">&lt;div title="hello world"&gt;title="hello world"&lt;/div&gt;</div>
+		<div title="chen">&lt;div title="chen"&gt;title="chen"&lt;/div&gt;</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			[lang|=en] {<br />
+				color: aqua;<br />
+			}<br />
+		</div>
+		<div style="height: 10px;"></div>
+		<div lang="en">&lt;div lang="en"&gt;Hello!&lt;/div&gt;</div>
+		<div lang="en-us">&lt;div lang="en-us"&gt;Hi!&lt;/div&gt;</div>
+		<div lang="en-gb">&lt;div lang="en-gb"&gt;Ello!&lt;/div&gt;</div>
+		<div lang="us">&lt;div lang="us"&gt;Ello!&lt;/div&gt;</div>
+		<div style="height: 20px;"></div>
+		<div><b>比较符号讲解：~= 、*= 、|= 、^= 、$= 的区别</b></div>
+		<div>attribute 属性中包含 value:</div>
+		<div class="text-yu-fa">[title<b>~=</b>flower]  &lt;img title="tulip flower"/&gt;</div>
+		<div style="height: 5px;"></div>
+		<div class="text-yu-fa">[title<b>*=</b>flower]  &lt;img title="ffffflowerrrrrr"/&gt;</div>
+		<div>attribute 属性以 value 开头:</div>
+		<div class="text-yu-fa">[lang<b>|=</b>en]  &lt;p lang="en-us"/&gt;</div>
+		<div style="height: 5px;"></div>
+		<div class="text-yu-fa">[lang<b>^=</b>en]  &lt;p lang="ennn"/&gt;</div>
+		<div>attribute 属性以 value 结尾:</div>
+		<div class="text-yu-fa">[attribute<b>$=</b>value]  &lt;a[src$=".pdf"]/&gt;</div>
+	</body>
+</html>
