@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	</head>
+	<body>
+		<h3>background-image属性</h3>
+		<div>background-image属性添加背景图片</div>
+		<div style="height: 10px;"></div>
+		<div id="example">
+			<h1>Lorem Ipsum Dolor</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+				laoreet dolore magna aliquam erat volutpat.</p>
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			background: url(img_flwr.gif) right bottom no-repeat,<br />
+			 url(paper.gif) left top repeat;
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-tips">
+			不同的背景图像和图像用逗号隔开，所有的图片中显示在最顶端的为第一张.
+		</div>
+		<h3>background-size 属性</h3>
+		<div>background-size指定背景图像的大小。CSS3以前，背景图像大小由图像的实际大小决定。 </div>
+		<div style="height: 10px;"></div>
+		<div id="example2">
+			<h1>Lorem Ipsum Dolor</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+				laoreet dolore magna aliquam erat volutpat.</p>
+		</div>
+		<h3>background-origin 属性</h3>
+		<div>background-origin 属性指定了背景图像的位置区域。</div>
+		<div>content-box, padding-box,和 border-box区域内可以放置背景图像。</div>
+		<div style="display: flex;flex-direction: row;">
+			<div class="bgd-origin" style="background-origin: border-box">背景图像边界框的相对位置</div>
+			<div class="bgd-origin" style="background-origin: content-box">背景图像的相对位置的内容框</div>
+		</div>
+		<h3>background-clip属性</h3>
+		<div>background-clip背景剪裁属性是从指定位置开始绘制。</div>
+		<div style="display: flex;flex-direction: row;">
+			<div class="bgd-clip">border-box没有定义</div>
+			<div class="bgd-clip" style="background-clip: padding-box;">background-clip: padding-box</div>
+			<div class="bgd-clip" style="background-clip: content-box;">background-clip: content-box</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.bgd-clip {
+			border: 10px dotted black;
+			padding:10px;
+			background: #8fe3e1;
+		}
+		.bgd-origin {
+			border:1px solid black;
+			padding:35px;
+			background-image:url(../img/html5.gif);
+			background-size: 30px 30px;
+			background-repeat:no-repeat;
+			background-position:left;
+		}
+		#example {
+			background-image: url(../img/mui.png), url(../img/html5.gif);
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+			padding: 15px;
+		}
+		#example2 {
+			background-image: url(../img/mui.png), url(../img/html5.gif);
+			background-size: 100px 102px;
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+			padding: 15px;
+		}
+	</style>
+</html>
