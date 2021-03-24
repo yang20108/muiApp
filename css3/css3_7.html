@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>@font-face 规则</h3>
+		<div>您"自己的"的字体是在 <span class="def-bgc-tips">CSS3 @font-face</span> 规则中定义的。</div>
+		<div class="text-yu-fa">
+			@font-face {<br />
+				font-family: myFirstFont;<br />
+				src: url('Sansation_Light.ttf')<br />
+					,url('Sansation_Light.eot'); /* Internet Explorer 9 只支持 .eot 格式的字体 */<br />
+			}<br />
+			div {<br />
+				font-family: myFirstFont;<br />
+			}
+		</div>
+		<h3>使用粗体文本</h3>
+		<div>您必须添加另一个包含粗体文字的@font-face规则：</div>
+		<div class="text-yu-fa">
+			@font-face {<br />
+				font-family: myFirstFont;<br />
+				src: url(sansation_bold.woff);<br />
+				font-weight:bold;<br />
+			}
+		</div>
+		<h3>CSS3 字体描述</h3>
+		<div>下表列出了所有的字体描述和里面的@font-face规则定义：</div>
+		<div class="ban-shi-title">
+			<div class="def-width2">描述符</div>
+			<div class="def-width2">值</div>
+			<div class="def-width2">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">font-family</div>
+			<div class="def-width2">name</div>
+			<div class="def-width2">规定字体的名称(必需)</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">src</div>
+			<div class="def-width2">URL</div>
+			<div class="def-width2">定义字体文件的 URL(必需)</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">font-stretch</div>
+			<div class="def-width2">
+				<ul>
+					<li>normal(默认)</li>
+					<li>condensed</li>
+					<li>ultra-condensed</li>
+					<li>extra-condensed</li>
+					<li>semi-condensed</li>
+					<li>expanded</li>
+					<li>semi-expanded</li>
+					<li>extra-expanded</li>
+					<li>ultra-expanded</li>
+				</ul>
+			</div>
+			<div class="def-width2">定义如何拉伸字体</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">font-style</div>
+			<div class="def-width2">
+				<ul>
+					<li>normal(默认)</li>
+					<li>italic</li>
+					<li>oblique</li>
+				</ul>
+			</div>
+			<div class="def-width2">定义字体的样式</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">font-weight</div>
+			<div class="def-width2">
+				<ul>
+					<li>normal(默认)</li>
+					<li>bold</li>
+					<li>100 ~ 900</li>
+				</ul>
+			</div>
+			<div class="def-width2">定义字体的粗细</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width2">unicode-range</div>
+			<div class="def-width2">unicode-range</div>
+			<div class="def-width2">定义字体支持的 UNICODE 字符范围(默认是 "U+0-10FFFF")</div>
+		</div>
+	</body>
+	<style type="text/css">
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			word-break: break-all;
+		}
+	</style>
+</html>

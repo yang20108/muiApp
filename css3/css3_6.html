@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>文本效果</h3>
+		<div>CSS3中包含几个新的文本属性特征：</div>
+		<ul>
+			<li>text-shadow</li>
+			<li>box-shadow</li>
+			<li>text-overflow</li>
+			<li>word-wrap</li>
+			<li>word-break</li>
+		</ul>
+		<h3>文本阴影</h3>
+		<div>text-shadow属性适用于文本阴影</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			text-shadow: 5px 5px 5px #000000;
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="text-shadow: 5px 5px 5px #000000;">给文本添加阴影</div>
+		<h3>box-shadow属性</h3>
+		<div>box-shadow 属性适用于盒子阴影</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			box-shadow: 10px 10px 5px grey;
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="box-shadow: 10px 10px 5px grey;width: 70%;height: 100px;background-color: #EEEEEE;"></div>
+		<div style="height: 10px;"></div>
+		<h3>::before 和 ::after 两个伪元素中添加阴影效果</h3>
+		<div id="beaf" style="width: 70%;height: 100px;background-color: #EEEEEE;position: relative;"></div>
+		<div style="height: 10px;"></div>
+		<h3>Text Overflow属性</h3>
+		<div class="text-yu-fa">
+			text-overflow: ellipsis;
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="cai-jian" style="text-overflow: ellipsis;">div 容器内的文本无法完全显示，可以看到它被裁剪了。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			text-overflow: clip;
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="cai-jian" style="text-overflow: clip;">div 容器内的文本无法完全显示，可以看到它被裁剪了。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			text-overflow: '&gt;&gt;'; // 使用自定义字符串，只在 Firefox 浏览器下有效
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="cai-jian" style="text-overflow: '>>';">div 容器内的文本无法完全显示，可以看到它被裁剪了。</div>
+		<h3>换行</h3>
+		<div>某个单词太长，不适合在一个区域内，它扩展到外面。CSS3中，自动换行属性允许您强制文本换行</div>
+		<div style="height: 10px;"></div>
+		<div style="width: 12em;border: 1px solid #000000;">
+			div:rongqineidewenbenwufawanquanxianshi
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			p { word-wrap: break-word; }
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="width: 12em;border: 1px solid #000000;word-wrap: break-word;">
+			div:rongqineidewenbenwufawanquanxianshi,keyikandaotabeicaijianle.
+		</div>
+		<h3>单词拆分换行</h3>
+		<div class="text-yu-fa">
+			p { word-break: keep-all; }
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="width: 12em;border: 1px solid #000000;word-break: keep-all;">
+			This paragraph contains some text: The lines will break at any character.
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			p { word-break: break-all; }
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="width: 12em;border: 1px solid #000000;word-break: break-all;">
+			This paragraph contains some text: The lines will break at any character.
+		</div>
+		<h3>CSS3新文本属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">hanging-punctuation</div>
+			<div class="def-width">规定标点字符是否位于线框之外</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">punctuation-trim</div>
+			<div class="def-width">规定是否对标点字符进行修剪</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-align-last</div>
+			<div class="def-width">设置如何对齐最后一行或紧挨着强制换行符之前的行</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-emphasis</div>
+			<div class="def-width">向元素的文本应用重点标记以及重点标记的前景色</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-justify</div>
+			<div class="def-width">规定当 text-align 设置为 "justify" 时所使用的对齐方法</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-outline</div>
+			<div class="def-width">规定文本的轮廓</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-overflow</div>
+			<div class="def-width">规定当文本溢出包含元素时发生的事情</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-shadow</div>
+			<div class="def-width">向文本添加阴影</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">text-wrap</div>
+			<div class="def-width">规定文本的换行规则</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">word-break</div>
+			<div class="def-width">规定非中日韩文本的换行规则</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">word-wrap</div>
+			<div class="def-width">允许对长的不可分割的单词进行分割并换行到下一行</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.cai-jian {
+			width: 12em;
+			overflow: hidden;
+			white-space: nowrap;
+			border: 1px solid #000000;
+		}
+		#beaf::after {
+			content: "";
+			width: 100%;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.3);
+		}
+	</style>
+</html>

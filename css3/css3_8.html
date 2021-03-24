@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<div>CSS3 转换可以对元素进行移动、缩放、转动、拉长或拉伸。</div>
+		<h3>2D 转换</h3>
+		<div>2D变换方法：</div>
+		<ul>
+			<li>translate()</li>
+			<li>rotate()</li>
+			<li>scale()</li>
+			<li>skew()</li>
+			<li>matrix()</li>
+		</ul>
+		<div class="text-yu-fa">
+			div {<br />
+				transform: rotate(30deg);<br />
+				-ms-transform: rotate(30deg); /* IE9 */<br />
+				-webkit-transform: rotate(30deg); /* Safari and Chrome */<br />
+			}
+		</div>
+		<h3>translate() 方法</h3>
+		<div>translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</div>
+		<div style="height: 10px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;"></div>
+		<div class="div-def-size" style="background-color: #007AFF;transform: translate(100px, 20px);color: #FFFFFF;position: absolute;">
+			transform: translate(100px, 20px);
+		</div>
+		</div>
+		<div style="height: 30px;"></div>
+		<h3>rotate() 方法</h3>
+		<div>在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</div>
+		<div style="height: 50px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;"></div>
+		<div class="div-def-size" style="background-color: #007AFF;transform: rotate(30deg);color: #FFFFFF;position: absolute;">
+			transform: rotate(30deg);
+		</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<h3>scale() 方法</h3>
+		<div>该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：</div>
+		<div style="height: 60px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;z-index: 2;"></div>
+		<div class="div-def-size" style="background-color: #007AFF;color: #FFFFFF;transform: scale(1, 2);position: absolute;">
+			transform: scale(1, 2);
+		</div>
+		</div>
+		<div style="height: 50px;"></div>
+		<h3>skew() 方法</h3>
+		<div>包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜。</div>
+		<ul>
+			<li>skewX(&lt;angle&gt;);表示只在X轴(水平方向)倾斜。</li>
+			<li>skewY(&lt;angle&gt;);表示只在Y轴(垂直方向)倾斜。</li>
+		</ul>
+		<div class="text-yu-fa">
+			transform:skew(&lt;angle&gt; [,&lt;angle&gt;]);
+		</div>
+		<div style="height: 30px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;z-index: 2;"></div>
+		<div class="div-def-size" style="background-color: #007AFF;color: #FFFFFF;transform: skew(-20deg, -10deg);position: absolute;">
+			transform: skew(-20deg, -10deg);
+		</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<h3>matrix() 方法</h3>
+		<div>matrix()方法和2D变换方法合并成一个。</div>
+		<div>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</div>
+		<div style="height: 50px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;z-index: 2;"></div>
+		<div class="div-def-size" style="transform:matrix(0.866,0.5,-0.5,0.866,0,0);background-color: #007AFF;color: #FFFFFF;position: absolute;">
+			transform:matrix(0.866, 0.5,<br /> -0.5, 0.866, 0, 0);
+		</div>
+		</div>
+		<div style="height: 30px;"></div>
+		<h3>新转换属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">Property</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transform</div>
+			<div class="def-width">适用于2D或3D转换的元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transform-origin</div>
+			<div class="def-width">允许您更改转化元素位置</div>
+		</div>
+		<h3>2D 转换方法</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">函数</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">matrix(n,n,n,n,n,n)</div>
+			<div class="def-width">定义 2D 转换，使用六个值的矩阵</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translate(x,y)</div>
+			<div class="def-width">定义 2D 转换，沿着 X 和 Y 轴移动元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translateX(n)</div>
+			<div class="def-width">定义 2D 转换，沿着 X 轴移动元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translateY(n)</div>
+			<div class="def-width">定义 2D 转换，沿着 Y 轴移动元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scale(x,y)</div>
+			<div class="def-width">定义 2D 缩放转换，改变元素的宽度和高度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scaleX(n)</div>
+			<div class="def-width">定义 2D 缩放转换，改变元素的宽度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scaleY(n)</div>
+			<div class="def-width">定义 2D 缩放转换，改变元素的高度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">rotate(angle)</div>
+			<div class="def-width">定义 2D 旋转，在参数中规定角度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">skew(x-angle,y-angle)</div>
+			<div class="def-width">定义 2D 倾斜转换，沿着 X 和 Y 轴</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">skewX(angle)</div>
+			<div class="def-width">定义 2D 倾斜转换，沿着 X 轴</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">skewY(angle)</div>
+			<div class="def-width">定义 2D 倾斜转换，沿着 Y 轴</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.div-def-size {
+			width: 200px;height: 100px;
+		}
+	</style>
+</html>
