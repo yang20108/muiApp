@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<div>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。要实现这一点，必须规定两项内容：</div>
+		<ul>
+			<li>指定要添加效果的CSS属性</li>
+			<li>指定效果的持续时间</li>
+		</ul>
+		<div id="tran" onclick="ontran()" class="tran-shili">width过渡效果 transition:width 2s;</div>
+		<h3>多项改变</h3>
+		<div class="tran-shili2">width,height,transform过渡效果 transition:width 2s;</div>
+		<h3>CSS3过渡属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transition</div>
+			<div class="def-width">简写属性，用于在一个属性中设置四个过渡属性</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transition-property</div>
+			<div class="def-width">规定应用过渡的 CSS 属性的名称</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transition-duration</div>
+			<div class="def-width">定义过渡效果花费的时间。默认是 0</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transition-timing-function</div>
+			<div class="def-width">规定过渡效果的时间曲线。默认是 "ease"</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transition-delay</div>
+			<div class="def-width">规定过渡效果何时开始。默认是 0</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function ontran() {
+			// var vtran = document.getElementById("tran");
+			// vtran.style.width = "200px";
+		}
+	</script>
+	<style type="text/css">
+		.tran-shili2 {
+			width: 100px;
+			height: 100px;
+			background-color: #aaffff;
+			word-break: break-all;
+			transition: width 2s, height 2s, transform 2s;
+		}
+		.tran-shili2:hover {
+			width: 200px;
+			height: 200px;
+			transform: rotate(180deg);
+		}
+		.tran-shili {
+			width: 100px;
+			height: 100px;
+			background-color: #aaffff;
+			word-break: break-all;
+			transition: width 2s;
+		}
+		.tran-shili:hover {
+			width: 200px;
+		}
+	</style>
+</html>

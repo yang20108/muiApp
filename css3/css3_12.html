@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>CSS3多列属性</h3>
+		<ul>
+			<li>column-count</li>
+			<li>column-gap</li>
+			<li>column-rule-style</li>
+			<li>column-rule-width</li>
+			<li>column-rule-color</li>
+			<li>column-rule</li>
+			<li>column-span</li>
+			<li>column-width</li>
+		</ul>
+		<h3>创建多列</h3>
+		<div>column-count: 3; 属性指定了需要分割的列数</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;border: 1px solid #000000;">
+			当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家
+		</div>
+		<h3>多列中列与列间的间隙</h3>
+		<div>column-gap: 50px; 属性指定了列与列间的间隙</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;column-gap: 50px;border: 1px solid #000000;">
+			当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家
+		</div>
+		<h3>列边框</h3>
+		<div>column-rule-style: solid; 属性指定了列与列间的边框样式</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;column-gap: 50px;column-rule-style: solid;border: 1px solid #000000;">
+			当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家
+		</div>
+		<div style="height: 10px;"></div>
+		<div>column-rule-width: 2px; 属性指定了两列的边框厚度</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;column-gap: 50px;column-rule-style: solid;column-rule-width: 2px;border: 1px solid #000000;">
+			当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家
+		</div>
+		<div style="height: 10px;"></div>
+		<div>column-rule-color: blue; 属性指定了两列的边框颜色</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;column-gap: 50px;column-rule-style: solid;column-rule-color: blue;
+		column-rule-width: 2px;border: 1px solid #000000;">
+			当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家
+		</div>
+		<h3>指定元素跨越多少列</h3>
+		<div>column-span: all; 元素跨越所有列</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;column-gap: 40px;border: 1px solid #000000;">
+			<h4 style="column-span: all;">英国维斯米斯特教堂碑文</h4>
+			<div>当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家</div>
+		</div>
+		<h3>指定列的宽度</h3>
+		<div>column-width: 100px; 属性指定了列的宽度</div>
+		<div style="height: 10px;"></div>
+		<div style="column-count: 3;column-width: 100px;column-gap: 10px;border: 1px solid #000000;">
+			当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家
+		</div>
+		<h3>CSS3 多列属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-count</div>
+			<div class="def-width">指定元素应该被分割的列数</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-fill</div>
+			<div class="def-width">指定如何填充列</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-gap</div>
+			<div class="def-width">指定列与列之间的间隙</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-rule</div>
+			<div class="def-width">所有 column-rule-* 属性的简写</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-rule-color</div>
+			<div class="def-width">指定两列间边框的颜色</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-rule-style</div>
+			<div class="def-width">指定两列间边框的样式</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-rule-width</div>
+			<div class="def-width">指定两列间边框的厚度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-span</div>
+			<div class="def-width">指定元素要跨越多少列</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">column-width</div>
+			<div class="def-width">指定列的宽度</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">columns</div>
+			<div class="def-width">column-width 与 column-count 的简写属性</div>
+		</div>
+	</body>
+</html>

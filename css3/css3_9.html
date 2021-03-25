@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div>3D 转换方法：</div>
+		<ul>
+			<li>rotateX()</li>
+			<li>rotateY()</li>
+		</ul>
+		<h3>rotateX() 方法</h3>
+		<div>rotateX()方法，围绕其在一个给定度数X轴旋转的元素</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			transform: rotateX(120deg);<br />
+			-webkit-transform: rotateX(120deg); /* Safari and Chrome */
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="display: flex;align-items: center;">
+			1<input type="range" id="rotateX" min="1" max="200" value="120" oninput="changeROX()" />200
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;"></div>
+		<div id="divRox" class="div-def-size" style="transform: rotateX(120deg);background-color: #007AFF;color: #FFFFFF;position: absolute;">
+			transform: rotateX(120deg);
+		</div>
+		</div>
+		<h3>rotateY() 方法</h3>
+		<div>rotateY()方法，围绕其在一个给定度数Y轴旋转的元素。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			transform: rotateY(130deg);<br />
+			-webkit-transform: rotateY(130deg); /* Safari and Chrome */
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="display: flex;align-items: center;">
+			1<input type="range" id="rotateY" min="1" max="200" value="130" oninput="changeROY()" />200
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="position: relative;height: 100px;">
+		<div class="div-def-size" style="border: 1px dashed #000000;position: absolute;"></div>
+		<div id="divRoy" class="div-def-size" style="transform: rotateY(130deg);background-color: #007AFF;color: #FFFFFF;position: absolute;">
+			transform: rotateY(130deg);
+		</div>
+		</div>
+		<h3>CSS3转换属性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transform</div>
+			<div class="def-width">向元素应用 2D 或 3D 转换</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transform-origin</div>
+			<div class="def-width">允许你改变被转换元素的位置</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">transform-style</div>
+			<div class="def-width">规定被嵌套元素如何在 3D 空间中显示</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">perspective</div>
+			<div class="def-width">规定 3D 元素的透视效果</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">perspective-origin</div>
+			<div class="def-width">规定 3D 元素的底部位置</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">backface-visibility</div>
+			<div class="def-width">定义元素在不面对屏幕时是否可见</div>
+		</div>
+		<h3>3D 转换方法</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">函数</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</div>
+			<div class="def-width">定义 3D 转换，使用 16 个值的 4x4 矩阵</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translate3d(x,y,z)</div>
+			<div class="def-width">定义 3D 转化</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translateX(x)</div>
+			<div class="def-width">定义 3D 转化，仅使用用于 X 轴的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translateY(y)</div>
+			<div class="def-width">定义 3D 转化，仅使用用于 Y 轴的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">translateZ(z)</div>
+			<div class="def-width">定义 3D 转化，仅使用用于 Z 轴的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scale3d(x,y,z)</div>
+			<div class="def-width">定义 3D 缩放转换</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scaleX(x)</div>
+			<div class="def-width">定义 3D 缩放转换，通过给定一个 X 轴的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scaleY(y)</div>
+			<div class="def-width">定义 3D 缩放转换，通过给定一个 Y 轴的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">scaleZ(z)</div>
+			<div class="def-width">定义 3D 缩放转换，通过给定一个 Z 轴的值</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">rotate3d(x,y,z,angle)</div>
+			<div class="def-width">定义 3D 旋转</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">rotateX(angle)</div>
+			<div class="def-width">定义沿 X 轴的 3D 旋转</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">rotateY(angle)</div>
+			<div class="def-width">定义沿 Y 轴的 3D 旋转</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">rotateZ(angle)</div>
+			<div class="def-width">定义沿 Z 轴的 3D 旋转</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">perspective(n)</div>
+			<div class="def-width">定义 3D 转换元素的透视视图</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var divRox = document.getElementById("divRox");
+			var divRoy = document.getElementById("divRoy");
+		}
+		function changeROX() {
+			var roxVal = document.getElementById("rotateX").value;
+			divRox.style.transform = "rotateX("+roxVal+"deg)";
+			divRox.innerHTML = "transform: rotateX("+roxVal+"deg);"
+		}
+		function changeROY() {
+			var roxVal = document.getElementById("rotateY").value;
+			divRoy.style.transform = "rotateY("+roxVal+"deg)";
+			divRoy.innerHTML = "transform: rotateY("+roxVal+"deg);"
+		}
+	</script>
+</html>
