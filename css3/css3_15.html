@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>基本按钮样式</h3>
+		<button>默认按钮</button>
+		<h3>按钮颜色</h3>
+		<button class="btn-size" style="background-color: #4CAF50;color: #FFFFFF;border-color: #4CAF50;">Green</button>
+		<button class="btn-size" style="background-color: #008CBA;color: #FFFFFF;border-color: #008CBA;">Blue</button>
+		<button class="btn-size" style="background-color: #f44336;color: #FFFFFF;border-color: #f44336;">Red</button>
+		<button class="btn-size" style="background-color: #e7e7e7;color: black;border-color: #e7e7e7;">Gray</button>
+		<button class="btn-size" style="background-color: #555555;color: #FFFFFF;border-color: #555555;">Black</button>
+		<h3>按钮大小</h3>
+		<button style="background-color: #4CAF50;color: #FFFFFF;border-color: #4CAF50;padding: 10px;font-size: 10px;">10px</button>
+		<button style="background-color: #008CBA;color: #FFFFFF;border-color: #008CBA;padding: 10px;font-size: 12px;">12px</button>
+		<button style="background-color: #f44336;color: #FFFFFF;border-color: #f44336;padding: 10px;font-size: 16px;">16px</button>
+		<button style="background-color: #e7e7e7;color: black;border-color: #e7e7e7;padding: 10px;font-size: 20px;">20px</button>
+		<button style="background-color: #555555;color: #FFFFFF;border-color: #555555;padding: 10px;font-size: 25px;">25px</button>
+		<h3>禁用按钮</h3>
+		<button class="btn-size" style="background-color: #4CAF50;color: #FFFFFF;border-color: #4CAF50;">正常按钮</button>
+		<button class="btn-size" disabled style="background-color: #4CAF50;color: #FFFFFF;border-color: #4CAF50;opacity: 0.6;">禁用按钮</button>
+		<h3>按钮动画</h3>
+		<button class="btn-jian-tou" style="vertical-align: middle;">
+			<span>Hover</span>
+		</button>
+		<div style="width: 100%;height: 10px;"></div>
+		<button class="btn-bo-wen">波纹</button>
+		<div style="width: 100%;height: 10px;"></div>
+		<button class="btn-xia-ya">压下</button>
+		<div style="width: 100%;height: 10px;"></div>
+	</body>
+	<style type="text/css">
+		.btn-xia-ya:active {
+			background-color: #3e8e41;
+			box-shadow: 0 1px #666;
+			transform: translateY(4px);
+		}
+		.btn-xia-ya:hover {
+			background-color: #3e8e41;
+		}
+		.btn-xia-ya {
+			width: 110px;
+			height: 50px;
+			font-size: 20px;
+			border-radius: 15px;
+			display: inline-block;
+			background-color: #4CAF50;color: #FFFFFF;
+			border: none;
+			cursor: pointer;
+			text-decoration: none;
+			box-shadow: 0 5px #999;
+		}
+		.btn-bo-wen:active::after {
+			padding: 0;
+			margin: 0;
+			opacity: 1;
+			transition: 0s;
+		}
+		.btn-bo-wen::after {
+			content: "";
+			background: #90EE90;
+			display: block;
+			position: absolute;
+			padding-top: 300%;
+			padding-left: 350%;
+			margin-left: -100px !important;
+			margin-top: -150px;
+			border-radius: 50%;
+			opacity: 0;
+			transition: all 1s;
+		}
+		.btn-bo-wen {
+			width: 110px;
+			height: 50px;
+			font-size: 20px;
+			border-radius: 4px;
+			display: inline-block;
+			background-color: #4CAF50;color: #FFFFFF;
+			border: none;
+			position: relative;
+			transition-duration: 0.4s;
+			text-decoration: none;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		.btn-jian-tou:hover span::after {
+			opacity: 1;
+			right: 0;
+		}
+		.btn-jian-tou:hover span {
+			padding-right: 25px;
+		}
+		.btn-jian-tou span::after {
+			content: ">>";
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+		.btn-jian-tou span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+		.btn-jian-tou {
+			width: 110px;
+			height: 50px;
+			font-size: 20px;
+			margin-bottom: 4px;
+			border-radius: 4px;
+			display: inline-block;
+			background-color: #4CAF50;color: #FFFFFF;
+			border: none;
+			transition: all 0.5s;
+			cursor: pointer;
+		}
+		.btn-size {
+			width: 90px;
+			height: 40px;
+			margin-bottom: 4px;
+		}
+	</style>
+</html>

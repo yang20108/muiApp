@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<div>新的用户界面特性来调整元素尺寸，框尺寸和外边框。</div>
+		<ul>
+			<li>resize</li>
+			<li>box-sizing</li>
+			<li>outline-offset</li>
+		</ul>
+		<h3>Resizing 调整尺寸</h3>
+		<div>resize属性指定一个元素是否应该由用户去调整大小</div>
+		<div style="height: 10px;"></div>
+		<div class="div-resize">调整属性指定一个元素是否由用户可调整大小的。</div>
+		<div class="text-tips">（边框内右下角位置触发）</div>
+		<h3>Box Sizing 方框大小调整</h3>
+		<div>box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容。</div>
+		<div class="div-container">
+			<div class="div-box">这个 div 占据了左边的一半。</div>
+			<div class="div-box">这个 div 占据了右边的一半。</div>
+		</div>
+		<div style="height: 80px;"></div>
+		<h3>outline-offset 外形修饰</h3>
+		<div>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。</div>
+		<div>轮廓与边框有两点不同：</div>
+		<ul>
+			<li>轮廓不占用空间</li>
+			<li>轮廓可能是非矩形</li>
+		</ul>
+		<div style="height: 10px;"></div>
+		<div class="div-outline">这个 div有一个轮廓边界15 px边境外的边缘。</div>
+		<div style="height: 10px;"></div>
+		<h3>CSS 新的用户界面特性</h3>
+		<div class="ban-shi-title">
+			<div class="def-width">属性</div>
+			<div class="def-width">说明</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">appearance</div>
+			<div class="def-width">允许您使一个元素的外观像一个标准的用户界面元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">box-sizing</div>
+			<div class="def-width">允许你以适应区域而用某种方式定义某些元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">icon</div>
+			<div class="def-width">为创作者提供了将元素设置为图标等价物的能力</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">nav-down</div>
+			<div class="def-width">指定在何处使用箭头向下导航键时进行导航</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">nav-index</div>
+			<div class="def-width">指定一个元素的Tab的顺序</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">nav-left</div>
+			<div class="def-width">指定在何处使用左侧的箭头导航键进行导航</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">nav-right</div>
+			<div class="def-width">指定在何处使用右侧的箭头导航键进行导航</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">nav-up</div>
+			<div class="def-width">指定在何处使用箭头向上导航键时进行导航</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">outline-offset</div>
+			<div class="def-width">外轮廓修饰并绘制超出边框的边缘</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">resize</div>
+			<div class="def-width">指定一个元素是否是由用户调整大小</div>
+		</div>
+	</body>
+	<style type="text/css">
+		.div-outline {
+			margin:20px;
+			width:150px; 
+			padding:10px;
+			height:70px;
+			border:2px solid black;
+			outline:2px solid red;
+			outline-offset:15px;
+		}
+		.div-box {
+			width:50%;
+			box-sizing:border-box;
+			border:1em solid red;
+			float:left;
+		}
+		.div-container {
+			width:19em;
+			border:1em solid;
+		}
+		.div-resize {
+			border: 2px solid;
+			padding: 10px 10px;
+			width: 300px;
+			resize: both;
+			overflow: auto;
+		}
+	</style>
+</html>
