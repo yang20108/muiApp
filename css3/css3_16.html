@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css" />
+	</head>
+	<body>
+		<h3>带边框分页</h3>
+		<ul class="pagination">
+			<li>«</li>
+			<li>1</li>
+			<li class="active">2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>»</li>
+		</ul>
+	</body>
+	<style type="text/css">
+		.pagination li:first-child {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		.pagination li:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		ul.pagination li.active {
+			background-color: #4CAF50;
+			color: white;
+			border: 1px solid #4CAF50;
+		}
+
+		ul.pagination li {
+			display: inline-block;
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .3s;
+			border: 1px solid #ddd;
+			/* margin: 0 4px; 间隔 */
+		}
+
+		ul.pagination {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</html>
