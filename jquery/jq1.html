@@ -7,12 +7,24 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<!-- 标准mui.css -->
-		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("p").click(function() {
+					$(this).hide();
+				});
+			});
+		</script>
 	</head>
 
 	<body>
 		<div>jQuery 是一个 JavaScript 库。</div>
 		<div>jQuery 极大地简化了 JavaScript 编程。</div>
-		<div>jQuery 库可以通过一行简单的标记被添加到网页中。</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px solid #000000;padding:0 10px;">
+			<p>如果你点我，我就会消失。</p>
+			<p>继续点我!</p>
+			<p>接着点我!</p>
+		</div>
 	</body>
 </html>
