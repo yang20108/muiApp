@@ -9,26 +9,26 @@
 		<title>Java Script</title>
 		<link rel="stylesheet" href="css/mui.min.css" />
 		<script src="js/mui.min.js"></script>
-		<!-- JavaScript教程 https://www.runoob.com/jquery/jquery-selectors.html -->
+		<!-- JavaScript教程 https://www.runoob.com/jquery/jquery-stop.html -->
 	</head>
 	<body>
 		<div class="mui-content" style="height: 100%;">
 			<div style="padding: 3px 10px;background-color: #CCCCCC;">
 				<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 					<div class="mui-scroll">
-						<a class="mui-control-item mui-active" href="#item0">Test</a>
+						<a class="mui-control-item" href="#item0">Test</a>
 						<a class="mui-control-item" href="#item1">HTML</a>
 						<a class="mui-control-item" href="#item2">HTML5</a>
 						<a class="mui-control-item" href="#item3">Css</a>
 						<a class="mui-control-item" href="#item4">Css3</a>
 						<a class="mui-control-item" href="#item5">JavaScript</a>
-						<a class="mui-control-item" href="#item6">JQuery</a>
+						<a class="mui-control-item mui-active" href="#item6">JQuery</a>
 						<!-- <a class="mui-control-item" href="#item7">Vue</a>
 						<a class="mui-control-item" href="#item8">Svg</a> -->
 					</div>
 				</div>
 			</div>
-			<div id="item6" class="mui-control-content">
+			<div id="item6" class="mui-control-content mui-active">
 				<div class="mui-scroll-wrapper mui-scroll">
 					<ul class="bo-ul">
 						<li id="jquery/jq1.html" onclick="bindClick(this.id, 'Title')">
@@ -48,6 +48,36 @@
 						</li>
 						<li id="jquery/jq4.html" onclick="bindClick(this.id, 'Title')">
 							<span class="item">语法
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="jquery/jq5.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">选择器
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="jquery/jq6.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">事件
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="jquery/jq7.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">隐藏/显示
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="jquery/jq8.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">淡入淡出
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="jquery/jq9.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">滑动
+								<div class="chs"></div>
+							</span>
+						</li>
+						<li id="jquery/jq10.html" onclick="bindClick(this.id, 'Title')">
+							<span class="item">动画
 								<div class="chs"></div>
 							</span>
 						</li>
@@ -634,7 +664,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="item0" class="mui-control-content mui-active">
+			<div id="item0" class="mui-control-content">
 				<div class="mui-scroll-wrapper mui-scroll">
 					<ul class="bo-ul">
 						<li id="test/test_bar.html" onclick="bindClick(this.id, 'Title')">
@@ -670,7 +700,7 @@
 		<script type="text/javascript" charset="utf-8">
 			(function($) {
 				$('.mui-scroll-wrapper').scroll({
-					indicators: true //是否显示滚动条
+					indicators: false //是否显示滚动条
 				});
 			})(mui);
 
