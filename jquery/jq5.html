@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#yuansu").click(function() {
+					$("#ys-box p").hide();
+				});
+				$("#idwy").click(function() {
+					$("#id-box #test").hide();
+				});
+				$("#clas").click(function() {
+					$("#cla-box .test").hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>选择器</h3>
+		<div>jQuery 选择器允许您对 HTML 元素组或单个元素进行操作。</div>
+		<div>jQuery 选择器基于元素的 id、类、类型、属性、属性值等"查找"（或选择）HTML 元素。 它基于已经存在的 CSS 选择器，除此之外，它还有一些自定义的选择器。</div>
+		<div>jQuery 中所有选择器都以美元符号开头：$()</div>
+		<h3>元素选择器</h3>
+		<div class="text-yu-fa">
+			$("p") // 选取所有 &lt;p&gt; 元素
+		</div>
+		<div id="ys-box" style="border: 1px solid #000000;margin-top: 10px;padding: 10px;">
+			<h4>这是一个标题</h4>
+			<p>这是一个p段落。</p>
+			<p>这是另一个p段落。</p>
+			<button id="yuansu">点我</button>
+		</div>
+		<h3>#id 选择器</h3>
+		<div>jQuery #id 选择器通过 HTML 元素的 id 属性选取指定的元素，页面中元素的 id 应该是唯一的。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("#test") // 选取id 元素
+		</div>
+		<div id="id-box" style="border: 1px solid #000000;margin-top: 10px;padding: 10px;">
+			<h4>这是一个标题</h4>
+			<p>这是一个p段落。</p>
+			<p id="test">这是另一个p段落。</p>
+			<button id="idwy">点我</button>
+		</div>
+		<h3>.class 选择器</h3>
+		<div>jQuery 类选择器可以通过指定的 class 查找元素。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(".test") // 选取类选择器
+		</div>
+		<div id="cla-box" style="border: 1px solid #000000;margin-top: 10px;padding: 10px;">
+			<h4 class="test">这是一个标题</h4>
+			<p class="test">这是一个p段落。</p>
+			<p>这是另一个p段落。</p>
+			<button id="clas">点我</button>
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="ban-shi-title">
+			<div class="def-width">语法</div>
+			<div class="def-width">描述</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("*")</div>
+			<div class="def-width">选取所有元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("this")</div>
+			<div class="def-width">选取当前 HTML 元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("p.intro")</div>
+			<div class="def-width">选取class为intro的&lt;p&gt;元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("p:first")</div>
+			<div class="def-width">选取第一个&lt;p&gt;元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("ul li:first")</div>
+			<div class="def-width">选取第一个&lt;ul&gt;元素的第一个&lt;li&gt;元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("ul li:first-child")</div>
+			<div class="def-width">选取每个&lt;ul&gt;元素的第一个&lt;li&gt;元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("[href]")</div>
+			<div class="def-width">选取带有 href 属性的元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("a[target='_blank']")</div>
+			<div class="def-width">选取所有 target 属性值等于 "_blank" 的&lt;a&gt;元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("a[target!='_blank']")</div>
+			<div class="def-width">选取所有 target 属性值不等于 "_blank" 的&lt;a&gt;元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$(":button")</div>
+			<div class="def-width">选取所有 type="button" 的 &lt;input&gt; 元素 和 &lt;button&gt; 元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("tr:even")</div>
+			<div class="def-width">选取偶数位置的 &lt;tr&gt; 元素</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width">$("tr:odd")</div>
+			<div class="def-width">选取奇数位置的 &lt;tr&gt; 元素</div>
+		</div>
+	</body>
+</html>

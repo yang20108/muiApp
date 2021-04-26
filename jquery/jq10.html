@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#animate").click(function() {
+					$("#moveRight").animate({left: '200px'});
+				});
+				$("#animate2").click(function() {
+					$("#moveMore").animate({
+						left: '200px',
+						opacity: '0.5',
+						height: '100px',
+						width: '100px'
+					});
+				});
+				$("#animate3").click(function() {
+					$("#moveMore2").animate({
+						left: '250px',
+						height: '+=10px',
+						width: '+=10px',
+						maxHeight: '100px',
+						maxWidth: '100px'
+					});
+				});
+				$("#toggle").click(function() {
+					$("#moveToggle").animate({
+						height: "toggle"
+					})
+				});
+				$("#duilie").click(function() {
+					var dui = $("#moveDui");
+					dui.animate({height: '100px',opacity: '0.4'}, "slow");
+					dui.animate({width: '100px',opacity: '0.8'}, "slow");
+					dui.animate({height: '60px',opacity: '0.4'}, "slow");
+					dui.animate({width: '60px',opacity: '0.8'}, "slow");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>animate() 方法</h3>
+		<div>jQuery animate() 方法用于创建自定义动画。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).animate({params},speed,callback);
+		</div>
+		<div style="height: 10px;"></div>
+		<div>必需的 params 参数定义形成动画的 CSS 属性。</div>
+		<div>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。</div>
+		<div>可选的 callback 参数是动画完成后所执行的函数名称。</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<button id="animate">开始动画</button>
+			<div style="height: 10px;"></div>
+			<div style="position: relative;width: 100%;height: 100px;">
+				<div id="moveRight" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+			</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<div>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。
+		如果需要改变为，<span class="text-tips">我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute</span></div>
+		<h3>animate() - 操作多个属性</h3>
+		<div>请注意，生成动画的过程中可同时使用多个属性：</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<button id="animate2">开始动画</button>
+			<div style="height: 10px;"></div>
+			<div style="position: relative;width: 100%;height: 100px;">
+				<div id="moveMore" style="background:#98bf21;height:60px;width:60px;position:absolute;"></div>
+			</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<div><b>可以用 animate() 方法来操作所有 CSS 属性吗？</b></div>
+		<div>是的，几乎可以！不过，需要记住一件重要的事情：当使用 animate() 时，必须使用 Camel 标记法书写所有的属性名，比如：<br />
+		必须使用 paddingLeft 而不是 padding-left，<br />使用 marginRight 而不是 margin-right，等等。</div>
+		<div class="text-tips">
+			如果需要生成颜色动画，您需要从 https://plugins.jquery.com/color/ 下载 颜色动画 插件。
+		</div>
+		<h3>nimate() - 使用相对值</h3>
+		<div>也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<button id="animate3">开始动画</button>
+			<div style="height: 10px;"></div>
+			<div style="width: 100%;height: 100px;">
+				<div id="moveMore2" style="background:#98bf21;height:60px;width:60px;"></div>
+			</div>
+		</div>
+		<h3>animate() - 使用预定义的值</h3>
+		<div>您甚至可以把属性的动画值设置为 show、hide 或 toggle</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<button id="toggle">开始动画</button>
+			<div style="height: 10px;"></div>
+			<div style="width: 100%;height: 100px;">
+				<div id="moveToggle" style="background:#98bf21;height:100px;width:100px;"></div>
+			</div>
+		</div>
+		<h3>animate() - 使用队列功能</h3>
+		<div>默认地，jQuery 提供针对动画的队列功能。</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<button id="duilie">开始动画</button>
+			<div style="height: 10px;"></div>
+			<div style="width: 100%;height: 100px;">
+				<div id="moveDui" style="background:#98bf21;height:60px;width:60px;"></div>
+			</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+	</body>
+</html>

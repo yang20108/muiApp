@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#flipDown").click(function() {
+					$("#panelDown").slideDown("show");
+				});
+				$("#flipUp").click(function() {
+					$("#panelUp").slideUp("show");
+				});
+				$("#flipToggle").click(function() {
+					$("#panelToggle").slideToggle("show");
+				});
+			});
+		</script>
+		<style type="text/css">
+			#panelToggle, #flipToggle,
+			#panelDown, #flipDown,
+			#panelUp, #flipUp {
+				padding: 5px;
+				text-align: center;
+				background-color: #e5eecc;
+				border: solid 1px #c3c3c3;
+			}
+			#panelUp {
+				padding: 50px;
+			}
+			#panelDown, #panelToggle {
+				padding: 50px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<p>jQuery 滑动方法可使元素上下滑动。</p>
+		<h3>jQuery 滑动方法</h3>
+		<ul>
+			<li>slideDown()</li>
+			<li>slideUp()</li>
+			<li>slideToggle()</li>
+		</ul>
+		<h3>slideDown() 方法</h3>
+		<div>jQuery slideDown() 方法用于向下滑动元素。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).slideDown(speed,callback);
+		</div>
+		<div style="height: 10px;"></div>
+		<div>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。</div>
+		<div>可选的 callback 参数是滑动完成后所执行的函数名称。</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<div id="flipDown">点我滑下面板</div>
+			<div id="panelDown">Hello world!</div>
+		</div>
+		<h3>slideUp() 方法</h3>
+		<div>jQuery slideUp() 方法用于向上滑动元素。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).slideUp(speed,callback);
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<div id="flipUp">点我拉起面板</div>
+			<div id="panelUp">Hello world!</div>
+		</div>
+		<h3>slideToggle() 方法</h3>
+		<div>jQuery slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).slideToggle(speed,callback);
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<div id="flipToggle">点我，显示或隐藏面板。</div>
+			<div id="panelToggle">Hello world!</div>
+		</div>
+		<div style="height: 10px;"></div>
+	</body>
+</html>

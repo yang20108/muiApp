@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	</head>
+	<body>
+		<h3>什么是事件？</h3>
+		<div>页面对不同访问者的响应叫做事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="ban-shi-title">
+			<div class="def-width3">鼠标事件</div>
+			<div class="def-width3">键盘事件</div>
+			<div class="def-width3">表单事件</div>
+			<div class="def-width3">文档/窗口事件</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width3">click</div>
+			<div class="def-width3">keypress</div>
+			<div class="def-width3">submit</div>
+			<div class="def-width3">load</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width3">dblclick</div>
+			<div class="def-width3">keydown</div>
+			<div class="def-width3">change</div>
+			<div class="def-width3">resize</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width3">mouseenter</div>
+			<div class="def-width3">keyup</div>
+			<div class="def-width3">focus</div>
+			<div class="def-width3">scroll</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width3">mouseleave</div>
+			<div class="def-width3"></div>
+			<div class="def-width3">blur</div>
+			<div class="def-width3">unload</div>
+		</div>
+		<div class="ban-shi-item">
+			<div class="def-width3">hover</div>
+			<div class="def-width3"></div>
+			<div class="def-width3"></div>
+			<div class="def-width3"></div>
+		</div>
+		<h3>jQuery 事件方法语法</h3>
+		<div class="text-yu-fa">
+			$("p").click();
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("p").click(function() {<br />
+				// 动作触发后执行的代码!!<br />
+			});
+		</div>
+		<h3>常用的 jQuery 事件方法</h3>
+		<div><b>$(document).ready()</b> 方法允许我们在文档完全加载完后执行函数。</div>
+		<h4>click()</h4>
+		<div>click() 方法是当按钮点击事件被触发时会调用一个函数。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("p").click(function() {<br />
+				this.hide();<br />
+			});
+		</div>
+		<h4>dblclick()</h4>
+		<div>当双击元素时，会发生 dblclick 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("p").dblclick(function() {<br />
+				this.hide();<br />
+			});
+		</div>
+		<h4>mouseenter()</h4>
+		<div>当鼠标指针穿过元素时，会发生 mouseenter 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("#p1").mouseenter(function() {<br />
+				alert('您的鼠标移到了 id="p1" 的元素上!');<br />
+			});
+		</div>
+		<h4>mouseleave()</h4>
+		<div>当鼠标指针离开元素时，会发生 mouseleave 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("#p1").mouseleave(function() {<br />
+				alert('再见，您的鼠标离开了该段落');<br />
+			});
+		</div>
+		<h4>mousedown()</h4>
+		<div>当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("#p1").mousedown(function() {<br />
+				alert('鼠标在该段落上按下');<br />
+			});
+		</div>
+		<h4>mouseup()</h4>
+		<div>当在元素上松开鼠标按钮时，会发生 mouseup 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("#p1").mouseup(function() {<br />
+				alert('鼠标在段落上松开');<br />
+			});
+		</div>
+		<h4>hover()</h4>
+		<div>hover()方法用于模拟光标悬停事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("#p1").hover(function() {<br />
+				alert('你进入了 p1');<br />
+			}, function() {<br />
+				alert("拜拜! 现在你离开了 p1!");<br />
+			});
+		</div>
+		<h4>focus()</h4>
+		<div>当元素获得焦点时，发生 focus 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("input").focus(function() {<br />
+				$(this).css("background-color","#cccccc");<br />
+			});
+		</div>
+		<h4>blur()</h4>
+		<div>当元素失去焦点时，发生 blur 事件。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("input").blur(function() {<br />
+				$(this).css("background-color","#cccccc");<br />
+			});
+		</div>
+	</body>
+</html>

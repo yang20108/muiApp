@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#hide").click(function() {
+					$("#swhe").hide();
+				});
+				$("#show").click(function() {
+					$("#swhe").show();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>hide() 和 show()</h3>
+		<div>通过 jQuery，您可以使用 hide() 和 show() 方法来隐藏和显示 HTML 元素：</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).hide(speed, callback);<br />
+			<div style="height: 5px;"></div>
+			$(selector).show(speed, callback);<br />
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px solid #000000;padding: 10px;">
+			<p id="swhe">如果你点击“隐藏” 按钮，我将会消失。</p>
+			<button id="hide">隐藏</button>
+			<button id="show">显示</button>
+		</div>
+		<div style="height: 10px;"></div>
+		<div>可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或 "毫秒"。</div>
+		<div>可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(".hidebtn").click(function() {<br />
+				$("div").hide(1000, "linear", function() {<br />
+					alert("Hide() 方法已完成!");<br />
+				})<br />
+			});
+		</div>
+		<h3>toggle()</h3>
+		<div>通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。 </div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).toggle(speed, callback);
+		</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$("button").click(function() {<br />
+				$("p").toggle();<br />
+			});
+		</div>
+	</body>
+</html>
