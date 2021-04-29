@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p>Callback 函数在当前动画 100% 完成之后执行。</p>
+		<h3>动画的问题</h3>
+		<div>许多 jQuery 函数涉及动画。这些函数也许会将 speed 或 duration 作为可选参数。</div>
+		<div>例子：$("p").hide("slow")</div>
+		<div style="height: 10px;"></div>
+		<b>实例</b>
+		<div>以下实例在隐藏效果完全实现后回调函数:</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			// 使用 callback 实例<br />
+			$("button").click(function() {<br />
+			&nbsp;&nbsp;$("p").hide("slow", <b>function() {</b><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;alert("段落现在被隐藏了");<br />
+			&nbsp;&nbsp;<b>}</b>);<br />
+			});
+		</div>
+		<div style="height: 10px;"></div>
+		<div>以下实例没有回调函数，警告框会在隐藏效果完成前弹出：</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			// 没有 callback(回调)<br />
+			$("button").click(function() {<br />
+			&nbsp;&nbsp;$("p").hide(1000);<br />
+			&nbsp;&nbsp;alert("段落现在被隐藏了");<br />
+			});
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+	</body>
+</html>

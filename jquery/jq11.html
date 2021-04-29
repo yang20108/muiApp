@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<script src="../js/jquery1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#toggle").click(function() {
+					$("#moveToggle").animate({
+						height: "toggle"
+					}, 3000)
+				});
+				$("#stop").click(function() {
+					$("#moveToggle").stop();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>jQuery stop() 方法用于在动画或效果完成前对它们进行停止。</p>
+		<h3>stop() 方法</h3>
+		<div>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。</div>
+		<div style="height: 10px;"></div>
+		<div class="text-yu-fa">
+			$(selector).stop(stopAll, goToEnd);
+		</div>
+		<div style="height: 10px;"></div>
+		<div>可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。</div>
+		<div>可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。</div>
+		<div style="height: 10px;"></div>
+		<div style="border: 1px dashed #000000;padding: 10px;">
+			<button id="toggle">开始动画</button>
+			<button id="stop">停止动画</button>
+			<div style="height: 10px;"></div>
+			<div style="width: 100%;height: 100px;">
+				<div id="moveToggle" style="background:#98bf21;height:100px;width:100px;"></div>
+			</div>
+		</div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+		<div style="height: 10px;"></div>
+	</body>
+</html>
